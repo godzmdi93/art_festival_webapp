@@ -229,10 +229,7 @@
             </div>
         </section>
 
-        <div class="row">
-            <h2>Location</h2>
-        </div>
-
+        <div> <h2> Location </h2> </div>
         <section id="map">
         </section>
 
@@ -240,14 +237,15 @@
           var map;
           function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-              center: {lat: -34.397, lng: 150.644},
-              zoom: 8
+              center: {lat: 40.7915497, lng: -77.8601402},
+              zoom: 15
             });
           }
         </script>
 
-          <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-          <script src="main.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWEMQM9l1gdvBTBXaovReSEmYo8yRaFJU&callback=initMap" async defer></script>
+        <script src="main.js"></script>
 
     </body>
 </html>
