@@ -1,3 +1,5 @@
+import scrolling-nav.js;
+
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyA9VpnncQtXeiASQ_kuIHSWvv0c2dEteKk",

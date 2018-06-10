@@ -9,28 +9,33 @@
         <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
         <title>Art Festival</title>
+
+        <!-- Custom styles for this template -->
+        <link href="resources/css/scrolling-nav.css" rel="stylesheet">
+
     </head>
     <body>
         <header>
-            <nav>
-                <div class="row">
-                    <img src="resources/css/img/logo.png" alt ="Art Festival logo" class="logo">
-                    <ul class="main-nav">
-                        <li><a href="#">Get discount</a></li>
-                        <li><a href="#">quick look </a></li>
-                        <li><a href="#">Our Events</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-            </nav>
+          <nav>
+              <div class="row">
+                  <img src="resources/css/img/logo.png" alt ="Art Festival logo" class="logo">
+                  <ul class="main-nav">
+                      <li class="nav-item active"><a class="nav-link scroll" href="#coupon">Get Discount</a></li>
+                      <li class="nav-item active"><a class="nav-link scroll" href="#look">Quick Look</a></li>
+                      <li class="nav-item active"><a class="nav-link scroll" href="#browse">Browse</a></li>
+                      <li class="nav-item active"><a class="nav-link scroll" href="#contact">Contact Us</a></li>
+                      <li class="nav-item active"><a class="nav-link scroll" href="#location">Map</a></li>
+                  </ul>
+              </div>
+          </nav>
             <div class="hero-text-box">
                 <h1>Art Everywhere!</h1>
-                <a class="btn btn-full" href="#">Contact Us</a>
-                <a class="btn btn-ghost " href="#">Learn More</a>
+                <a class="btn btn-full" href="signin">Sign In</a>
+                <a class="btn btn-ghost " href="register">Register</a>
             </div>
         </header>
 
-        <section class="section-features">
+        <section id="coupon" class="section-features">
             <div class="row">
                 <h2>Get various discounts on food and drinks!</h2>
                 <p class="long-copy">
@@ -116,7 +121,7 @@
             </ul>
         </section>
 
-        <section class="section-steps">
+        <section id="browse" class="section-steps">
             <div class="row">
                 <h2>Browse on any device!</h2>
             </div>
@@ -141,7 +146,7 @@
             </div>
         </section>
 
-        <section class ="section-artistintro">
+        <section id="look" class ="section-artistintro">
             <div class="row">
                 <h2>Our artists are from all over the country</h2>
             </div>
@@ -167,7 +172,7 @@
             </div>
         </section>
 
-        <section class="section-form">
+        <section id="contact" class="section-form">
             <div class="row">
                 <h2>Contact us</h2>
             </div>
@@ -213,7 +218,7 @@
                          <div class="col span-1-of-3">
                             <label>Ask your question here</label>
                         </div>
-                        <div class="col span-2-of-3">
+                        <div class="col span-1-of-3">
                             <input type="message" name="message" id="message" placeholder="Your message" required>
                         </div>
                     </div>
@@ -229,7 +234,7 @@
             </div>
         </section>
 
-        <div class="row">
+        <div id="location" class="row">
             <h2>Location</h2>
         </div>
 
