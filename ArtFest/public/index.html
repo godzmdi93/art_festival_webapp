@@ -5,58 +5,55 @@
         <link rel ="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel ="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel ="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel ="stylesheet" type="text/css" href="vendors/css/animate.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
         <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
         <title>Art Festival</title>
-
-        <!-- Custom styles for this template -->
-        <link href="resources/css/scrolling-nav.css" rel="stylesheet">
-
     </head>
     <body>
         <header>
-          <nav>
-              <div class="row">
-                <!-- Logo Placeholder -->
-                  <!-- <img src="resources/css/img/logo.png" alt ="Art Festival logo" class="logo"> -->
-                  <ul class="main-nav">
-                      <li class="nav-item active"><a class="nav-link scroll" href="#deal">Deals</a></li>
-                      <li class="nav-item active"><a class="nav-link scroll" href="#look">Quick Look</a></li>
-                      <li class="nav-item active"><a class="nav-link scroll" href="#artist">Artists</a></li>
-                      <li class="nav-item active"><a class="nav-link scroll" href="#browse">Browse</a></li>
-                      <li class="nav-item active"><a class="nav-link scroll" href="#contact">Contact Us</a></li>
-                      <li class="nav-item active"><a class="nav-link scroll" href="#location">Map</a></li>
-                  </ul>
-              </div>
-          </nav>
+            <nav class="sticky">
+                <div class="row">
+                    <img src="resources/css/img/logo.png" alt ="Art Festival logo" class="logo">
+                    <img src="resources/css/img/logo-1.png" alt ="Art Festival logo" class="logo-1">
+                    <ul class="main-nav js--main-nav">
+                        <li><a href="#features">Get discount</a></li>
+                        <li><a href="#looks">quick look </a></li>
+                        <li><a href="#artists">Our Events</a></li>
+                        <li><a href="#contactus">Contact Us</a></li>
+                        <li><a href="#map">Map</a></li>
+                    </ul>
+                    <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+                </div>
+            </nav>
             <div class="hero-text-box">
                 <h1>Art Everywhere!</h1>
-                <a class="btn btn-full" href="login.html">Sign In</a>
-                <a class="btn btn-ghost " href="#register">Register</a>
+                <a class="btn btn-full btn-js-11" onclick=href="login.html">Log In</a>
+                <a class="btn btn-ghost  js--scroll-to-signup" href="#">Sign Up</a>
             </div>
         </header>
-
-        <section id="deal" class="section-features">
+        <section class="section-features js--section-features" id="features">
             <div class="row">
+
                 <h2>Get various discounts on food and drinks!</h2>
                 <p class="long-copy">
                     Hello, we're Artsy, a group of aesthetes at Penn State. Enjoying great food and drinks is one of the best parts of the festival. Let us take care of your hunger and quench your thirst!
                 </p>
             </div>
-            <div class ="row">
+            <div class ="row js--wp-1">
                 <div class="col span-1-of-4 box">
                     <i class="ion-images icon-big"></i>
                     <h3>Take photos</h3>
                     <p>
-                        Take photos with 4 different artists and get 5% discount on any drink at Champs! Show your photos when you order!
+                        Take photos of you enjoying the art festival and upload them by clicking the icon above and get 5% discount at Waker Chicken!
                     </p>
                 </div>
                 <div class="col span-1-of-4 box">
                     <i class="ion-laptop icon-big"></i>
-                    <h3>show our flyers</h3>
+                    <h3>Upload your story</h3>
                     <p>
-                        Simply show our flyer at The Allen Steet Grill and get 10% off of your total order!
+                        Tell us about your story or experience you are having at the festival and get 10% discount at Momotaro!
                     </p>
                 </div>
                 <div class="col span-1-of-4 box">
@@ -75,25 +72,7 @@
                 </div>
             </div>
         </section>
-
         <section class = "section-arts">
-          <div class="row">
-            <h2>upload out your images!</h2>
-                    <p class="long-copy" align="center">
-                        See the happy photos of art festival lovers!
-                    </p>
-                    <label class="upload" >
-                    </label>
-                    <input type="file" accept="image/*" id="file-input">
-                      <script>
-                        const fileInput = document.getElementById('file-input');
-
-                        fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
-                      </script>
-                    <button type="submitt">Submit</button>
-
-          </div>
-
             <ul class="arts-showcase clearfix">
                 <li>
                     <figure class ="arts-photo">
@@ -139,14 +118,13 @@
                 </li>
             </ul>
         </section>
-
-        <section id="browse" class="section-steps">
+        <section class="section-steps" id="looks">
             <div class="row">
                 <h2>Browse on any device!</h2>
             </div>
             <div class="row">
                 <div class="col span-1-of-2">
-                    <img src= "resources/img/phone.png" alt="Artsty app on iPhone" class="app-screen">
+                    <img src= "resources/img/phone.png" alt="Artsty app on iPhone" class="app-screen js--wp-2">
                 </div>
                 <div class="col span-1-of-2" steps-box>
                     <div class="works-step">
@@ -164,8 +142,40 @@
                 </div>
             </div>
         </section>
-
-        <section id="look" class ="section-artistintro">
+        <section class="section-form  js--section-form">
+            <div class="row">
+                <h2>Sign Up</h2>
+            </div>
+            <div class="row">
+                <form method="post" action="#" class ="contact-form">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="username">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="username" name="username" id="username" placeholder="Your email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="password" id="password" placeholder="Your password" required>
+                        </div>
+                    </div>
+                     <div class="row">
+                         <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Create">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class ="section-artistintro js--wp-3" id="artists">
             <div class="row">
                 <h2>Our artists are from all over the country</h2>
             </div>
@@ -190,13 +200,12 @@
                 </div>
             </div>
         </section>
-
-        <section id="contact" class="section-form">
+        <section class="section-form" id="contactus">
             <div class="row">
                 <h2>Contact us</h2>
             </div>
             <div class="row">
-                <form id="contactForm" method="post" action="#" class ="contact-form">
+                <form method="post" id="contactForm" action="#" class ="contact-form">
                     <div class="row">
                         <div class="col span-1-of-3">
                             <label for="name">Name</label>
@@ -235,10 +244,10 @@
                     </div>
                      <div class="row">
                          <div class="col span-1-of-3">
-                            <label>Ask your questions here</label>
+                            <label>Ask your question here</label>
                         </div>
-                        <div class="col span-1-of-3">
-                            <input type="message" name="message" id="message" placeholder="Your message" required>
+                        <div class="col span-2-of-3">
+                            <textarea name="message" id="message" placeholder="Your message"></textarea>
                         </div>
                     </div>
                      <div class="row">
@@ -252,6 +261,25 @@
                 </form>
             </div>
         </section>
+
+        <section>
+        <div class="row">
+          <h2>Image upload test!</h2>
+                  <p class="long-copy" align="center">
+                      See the happy photos of art festival lovers!
+                  </p>
+                  <label class="upload" >
+                  </label>
+                  <input type="file" accept="image/*" id="file-input">
+                    <script>
+                      const fileInput = document.getElementById('file-input');
+
+                      fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+                    </script>
+                  <button type="input">Submit</button>
+
+        </div>
+      </section>
 
         <div id="location" class="row">
             <h2>Location</h2>
@@ -270,15 +298,21 @@
           }
         </script>
 
-          <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-          <script src="main.js"></script>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWEMQM9l1gdvBTBXaovReSEmYo8yRaFJU&callback=initMap" async defer></script>
-          <!-- Add additional services you want to use -->
-          <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+        <script src="main.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWEMQM9l1gdvBTBXaovReSEmYo8yRaFJU&callback=initMap" async defer></script>
+        <!-- Add additional services you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src ="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src ="//cdn.jsedlivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src ="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src ="vendors/js/jquery.waypoints.min.js"></script>
+    <script src="resources/js/script.js"></script>
     </body>
 </html>

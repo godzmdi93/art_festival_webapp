@@ -6,8 +6,7 @@
 * {
     margin: 0;
     padding:0;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    
 }
 
 html,
@@ -18,8 +17,7 @@ body {
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
-    
+    overflow-x: hidden;    
 }
 
 .clearfix {zoom: 1}
@@ -38,13 +36,11 @@ body {
 
 .row {
     max-width: 1140px;
-    margin: 0 auto;
-    
+    margin: 0 auto;    
 }
 
 section {
-    padding: 80px 0;
-    
+    padding: 80px 0;    
 }
 
 .box {
@@ -53,11 +49,9 @@ section {
 
 
 /*------------------------Headings-------------*/
-
 h1,
 h2,
-h3 {
-     
+h3 {  
     font-weight:300;
     text-transform:uppercase;   
 }
@@ -69,8 +63,6 @@ h1 {
     font-size:240%;
     word-spacing: 4px;
     letter-spacing: 1px;
-    
-    
 }
 
 h2 {
@@ -79,14 +71,11 @@ h2 {
     text-align: center;
     margin-bottom:30px;
     letter-spacing: 1px;
-    
-    
 }
 
 h3 {
     font-size: 110%;
-    margin-bottom: 15px;
-    
+    margin-bottom: 15px;    
 }
 
 h2:after {
@@ -96,9 +85,7 @@ h2:after {
     content: " ";
     width: 100px;
     margin: 0 auto;
-    margin-top:30px;
-    
-    
+    margin-top:30px; 
 }
 
 
@@ -106,8 +93,7 @@ h2:after {
 .long-copy{
     line-height: 145%;
     width: 70%;
-    margin-left: 15%;
-    
+    margin-left: 15%;    
 }
 
 .box p {
@@ -115,19 +101,16 @@ h2:after {
     line-height: 145%;
 }
   
-
-
 /*--------ICONS----------*/
 .icon-big {
     font-size: 350%;
     display: block;
     color: #e67e22;
-    margin-bottom: 10px;
-    
+    margin-bottom: 10px;    
 }
 
 /*------------------------Button-------------*/
-
+.btn-js-11,
 .btn:link,
 .btn:visited,
 input[type=submit]{
@@ -137,11 +120,9 @@ input[type=submit]{
     text-decoration: none;
     border-radius: 200px;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
-   
-    
-    
 }
 
+.btn-js-11,
 .btn-full:link,
 .btn-full:visited,
 input[type=submit] {
@@ -157,6 +138,7 @@ input[type=submit] {
     color: #e67e22
 }
 
+.btn-js-11,
 .btn:hover,
 .btn:active,
 input[type=submit]:hover,
@@ -164,11 +146,11 @@ input[type=submit]:active{
     background-color: #cf6d17;
 }
 
-
+.btn-js-11:hover,
+.btn-js-11:active,
 .btn-full:hover,
 .btn-full:active {
     border: 1px solid #e67e22;
-
 }
 
 .btn-ghost:hover,
@@ -176,9 +158,6 @@ input[type=submit]:active{
     border: 1px solid #e67e22;
     color: #fff;
 }
-
-
-
 
 /*-----------------------------*/
 /* Header*/
@@ -190,11 +169,7 @@ header {
     background-position: center;
     height: 100vh;
     background-attachment: fixed;
-
-    
-
 }
-
 
 .hero-text-box {
     position: absolute;
@@ -202,8 +177,6 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-    
 }
 
 .logo {
@@ -213,6 +186,16 @@ header {
     margin-top: 20px;
     
 }
+
+.logo-1 {
+    display:none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
+/*Main Navi */
 
 .main-nav {
     float:right;
@@ -229,11 +212,12 @@ header {
 .main-nav li a:link,
 .main-nav li a:visited {
     padding: 8px 0;
-    color: #fff;
+    color:  #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
     border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s;
 }
 
@@ -242,15 +226,47 @@ header {
     border-bottom: 2px solid #e67e22;
     
 }
+/*mobile nav*/
+
+.mobile-nav-icon{
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+    
+    
+}
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+/*Sticky Navi */
+
+.sticky {
+    position: fixed;
+    top:0;
+    left:0; 
+    width:100%;
+    background-color: rgba(255,255,255,0.98);
+    box-shadow:0 2px 2px #efefef;
+    z-index: 9999;
+}
+.sticky .main-nav {margin-top: 18px;}
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 17px 0;
+    color: #555;
+}
+.sticky .logo {display:none;}
+.sticky .logo-1 {
+    display:block;
+}
 
 /*---------------------features-------*/
 .section-features .long-copy{
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px;    
 }
-
-
-
 /*---------------------Art-------*/
 .section-arts{
     padding:0;
@@ -287,8 +303,6 @@ header {
     
 }
 
-
-
 .arts-photo img:hover{
     opacity: 1;
     transform: scale(1.03);
@@ -315,13 +329,9 @@ header {
     
 }
 
-.app-screen {
-    
+.app-screen {   
     width:40%;
-    margin-left: 300px;
-
-    
-    
+    margin-left: 300px;    
 }
 
 .works-step {
@@ -345,10 +355,7 @@ header {
     padding: 5px;
     float: left;
     font-size: 150%;
-    margin-right: 25px;
-    
-    
-    
+    margin-right: 25px;    
 }
 
 
@@ -358,8 +365,7 @@ header {
 .box1 img {
     width:100%;
     height: auto;
-    margin-bottom: 15px;
-    
+    margin-bottom: 15px;    
 }
 
 .box1 p {
@@ -377,9 +383,7 @@ header {
     background-image:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0, 0.8)),url(img/hey.jpg);
     background-size: cover;
     color: #fff;
-    background-attachment: fixed;
-    
-    
+    background-attachment: fixed;  
 }
 
 
@@ -399,8 +403,6 @@ blockquote:before {
     top: -5px;
     position:absolute;
     left: -5px;
-   
-    
 }
 
 
@@ -418,8 +420,6 @@ cite img {
     border-radius: 50%;
     margin-right: 10px;
     vertical-align: middle;
-    
-    
 }
 
 
@@ -440,22 +440,36 @@ textarea {
     width: 100%;
     padding: 7px;
     border-radius: 3px;
-    border: 1px solid #ccc;
-    
+    border: 1px solid #ccc;    
 }
 
 
 textarea {
-    height: 100px;
-    
+    height: 100px;   
 }
 
 
 input[type=checkbox]{
     margin:10px 5px 10px 0;
-    
-    
-
 }
 
 *:focus {outline: none;}
+
+/*        animations         */
+
+.js--wp-1,
+.js--wp-2 {
+    opacity:0;
+    animation-duration: 1s;
+}
+
+.js--wp-3{
+    animation-duration: : 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated {
+    opacity:1;
+}
+
+

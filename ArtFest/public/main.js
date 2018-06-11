@@ -1,5 +1,3 @@
-import scrolling-nav.js;
-
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyA9VpnncQtXeiASQ_kuIHSWvv0c2dEteKk",
@@ -13,17 +11,6 @@ firebase.initializeApp(config);
 
 // Reference messages collection
 var messagesRef = firebase.database().ref('messages');
-var storageRef = firebase.storage().ref('images');
-
-var firebase = require('firebase');
-var firebaseui = require('firebaseui');
-
-document.getElementById("fileInput").addEventListener('submitt', upload);
-
-function upload() {
-  var imageRef = storageRef.child(document.getElementById("fileInput"));
-  storageRef.put(filename);
-}
 
 // Listen for form submit
 document.getElementById('contactForm').addEventListener('submit', submitForm);
@@ -65,4 +52,17 @@ function saveMessage(name, email, message){
     email:email,
     message:message
   });
+}
+
+
+var storageRef = firebase.storage().ref('images');
+
+var firebase = require('firebase');
+var firebaseui = require('firebaseui');
+
+document.getElementById("fileInput").addEventListener('input', upload);
+
+function upload() {
+  var imageRef = storageRef.child(document.getElementById("fileInput"));
+  storageRef.put(filename);
 }

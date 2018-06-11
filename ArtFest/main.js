@@ -53,3 +53,16 @@ function saveMessage(name, email, message){
     message:message
   });
 }
+
+
+var storageRef = firebase.storage().ref('images');
+
+var firebase = require('firebase');
+var firebaseui = require('firebaseui');
+
+document.getElementById("fileInput").addEventListener('input', upload);
+
+function upload() {
+  var imageRef = storageRef.child(document.getElementById("fileInput"));
+  storageRef.put(filename);
+}
