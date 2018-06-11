@@ -1,11 +1,6 @@
-import Vue from 'vue';
 import Router from 'vue-router';
-import Home from '@/components/Home';
-import ViewEmployee from '@/components/ViewEmployee';
-import NewEmployee from '@/components/NewEmployee';
-import EditEmployee from '@/components/EditEmployee';
-import Login from '@/components/Login';
-import Register from '@/components/Register';
+import Home from '../index.html';
+import Login from '../login.html';
 import firebase from 'firebase';
 
 Vue.use(Router);

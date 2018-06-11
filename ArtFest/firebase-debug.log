@@ -1,32 +1,32 @@
-[debug] [2018-06-10T19:19:03.606Z] ----------------------------------------------------------------------
-[debug] [2018-06-10T19:19:03.610Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Hedgie\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-06-10T19:19:03.611Z] CLI Version:   3.18.6
-[debug] [2018-06-10T19:19:03.611Z] Platform:      win32
-[debug] [2018-06-10T19:19:03.611Z] Node Version:  v8.11.2
-[debug] [2018-06-10T19:19:03.611Z] Time:          Sun Jun 10 2018 15:19:03 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-06-10T19:19:03.611Z] ----------------------------------------------------------------------
+[debug] [2018-06-11T16:44:34.537Z] ----------------------------------------------------------------------
+[debug] [2018-06-11T16:44:34.537Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Hedgie\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-06-11T16:44:34.537Z] CLI Version:   3.18.6
+[debug] [2018-06-11T16:44:34.537Z] Platform:      win32
+[debug] [2018-06-11T16:44:34.537Z] Node Version:  v8.11.2
+[debug] [2018-06-11T16:44:34.537Z] Time:          Mon Jun 11 2018 12:44:34 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-11T16:44:34.537Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-06-10T19:19:03.645Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-06-10T19:19:03.647Z] > authorizing via signed-in user
-[debug] [2018-06-10T19:19:03.652Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/contactform-1be84  
+[debug] [2018-06-11T16:44:34.568Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-11T16:44:34.568Z] > authorizing via signed-in user
+[debug] [2018-06-11T16:44:34.568Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/contactform-1be84  
   
- Sun Jun 10 2018 15:19:03 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-06-10T19:19:04.484Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-10T19:19:04.485Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/contactform-1be84/tokens  
+ Mon Jun 11 2018 12:44:34 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-11T16:44:35.157Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-11T16:44:35.157Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/contactform-1be84/tokens  
   
- Sun Jun 10 2018 15:19:04 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-06-10T19:19:05.058Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-10T19:19:05.059Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/contactform-1be84  
+ Mon Jun 11 2018 12:44:35 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-11T16:44:35.588Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-11T16:44:35.588Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/contactform-1be84  
   
- Sun Jun 10 2018 15:19:05 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-06-10T19:19:05.658Z] <<< HTTP RESPONSE 200
+ Mon Jun 11 2018 12:44:35 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-11T16:44:36.404Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'C:\Users\Hedgie\Documents\GitHub\art_festival_webapp\ArtFest'...
 [info] 
-[debug] [2018-06-10T19:19:05.663Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/861580409827/clients/_:getWebAppConfig  
+[debug] [2018-06-11T16:44:36.419Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/861580409827/clients/_:getWebAppConfig  
   
- Sun Jun 10 2018 15:19:05 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-06-10T19:19:06.139Z] <<< HTTP RESPONSE 200
+ Mon Jun 11 2018 12:44:36 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-11T16:44:38.619Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] +  hosting: Local server: http://localhost:5000
 

@@ -77,6 +77,23 @@
         </section>
 
         <section class = "section-arts">
+          <div class="row">
+            <h2>upload out your images!</h2>
+                    <p class="long-copy" align="center">
+                        See the happy photos of art festival lovers!
+                    </p>
+                    <label class="upload" >
+                    </label>
+                    <input type="file" accept="image/*" id="file-input">
+                      <script>
+                        const fileInput = document.getElementById('file-input');
+
+                        fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+                      </script>
+                    <button type="submitt">Submit</button>
+
+          </div>
+
             <ul class="arts-showcase clearfix">
                 <li>
                     <figure class ="arts-photo">
@@ -255,8 +272,13 @@
 
           <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
           <script src="main.js"></script>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWEMQM9l1gdvBTBXaovReSEmYo8yRaFJU&callback=initMap"
-async defer></script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWEMQM9l1gdvBTBXaovReSEmYo8yRaFJU&callback=initMap" async defer></script>
+          <!-- Add additional services you want to use -->
+          <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script>
 
     </body>
 </html>

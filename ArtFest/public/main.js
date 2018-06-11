@@ -13,6 +13,17 @@ firebase.initializeApp(config);
 
 // Reference messages collection
 var messagesRef = firebase.database().ref('messages');
+var storageRef = firebase.storage().ref('images');
+
+var firebase = require('firebase');
+var firebaseui = require('firebaseui');
+
+document.getElementById("fileInput").addEventListener('submitt', upload);
+
+function upload() {
+  var imageRef = storageRef.child(document.getElementById("fileInput"));
+  storageRef.put(filename);
+}
 
 // Listen for form submit
 document.getElementById('contactForm').addEventListener('submit', submitForm);
