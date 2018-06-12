@@ -53,16 +53,43 @@ function saveMessage(name, email, message){
     message:message
   });
 }
+var selectedFile;
 
 
-var storageRef = firebase.storage().ref('images');
+	document.getElementById("upload").addEventListener('change', handleFileSelect, false);
 
-var firebase = require('firebase');
-var firebaseui = require('firebaseui');
 
-document.getElementById("fileInput").addEventListener('input', upload);
+function handleFileSelect(event) {
+	$(".upload-group").show();
+	selectedFile = event.target.files[0];
+};
 
-function upload() {
-  var imageRef = storageRef.child(document.getElementById("fileInput"));
-  storageRef.put(filename);
+function confirmUpload() {
+	var metadata = {
+		contentType: 'image',
+		customMetadata: {
+			'dogType': 'Lab',
+			'uploadedBy': 'someone',
+			'title': $("#imgTitle").val(),
+			'caption': $("#imgDesc").val()
+		},
+	};
+	var uploadTask = firebase.storage().ref().child('images/' + selectedFile.name).put(selectedFile, metadata);
+	// Register three observers:
+	// 1. 'state_changed' observer, called any time the state changes
+	// 2. Error observer, called on failure
+	// 3. Completion observer, called on successful completion
+	uploadTask.on('state_changed', function(snapshot){
+  		// Observe state change events such as progress, pause, and resume
+  		// See below for more detail
+	}, function(error) {
+  		// Handle unsuccessful uploads
+	}, function() {
+  		// Handle successful uploads on complete
+  		// For instance, get the download URL: https://firebasestorage.googleapis.com/...
+  		$(".upload-group")[0].before("Success!");
+  		$(".upload-group").hide();
+
+	});
+
 }
