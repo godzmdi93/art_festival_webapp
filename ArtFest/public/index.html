@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<script src="https://www.gstatic.com/firebasejs/5.0.0/firebase.js"></script>
+
+  <!-- Add additional services you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script>
+  <script src="main.js"></script>
+
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +40,6 @@
     <div class="hero-text-box">
       <h1>Art Everywhere!</h1>
       <a class="btn btn-full btn-js-11" onclick=href="login.html">Log In</a>
-      <a class="btn btn-ghost  js--scroll-to-signup" href="#">Sign Up</a>
     </div>
   </header>
   <section class="section-features js--section-features" id="features">
@@ -142,39 +151,7 @@
       </div>
     </div>
   </section>
-  <section class="section-form  js--section-form">
-    <div class="row">
-      <h2>Sign Up</h2>
-    </div>
-    <div class="row">
-      <form method="post" action="#" class ="contact-form">
-        <div class="row">
-          <div class="col span-1-of-3">
-            <label for="username">Email</label>
-          </div>
-          <div class="col span-2-of-3">
-            <input type="text" name="username" id="username" placeholder="Your email" required>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col span-1-of-3">
-            <label for="password">Password</label>
-          </div>
-          <div class="col span-2-of-3">
-            <input type="text" name="password" id="password" placeholder="Your password" required>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col span-1-of-3">
-            <label>&nbsp;</label>
-          </div>
-          <div class="col span-2-of-3">
-            <input type="submit" value="Create">
-          </div>
-        </div>
-      </form>
-    </div>
-  </section>
+
   <section class ="section-artistintro js--wp-3" id="artists">
     <div class="row">
       <h2>Our artists are from all over the country</h2>
@@ -263,17 +240,6 @@
   </section>
 
   <section>
-    <div class="container" id="login">
-  <div class="row">
-      <h2>Sign in </h2>
-      <button type="button" class="btn btn-primary" onclick="signIn();"><i class="fa fa-google-plus"></i> Sign-In With Google</button>
-
-    </div>
-  </div>
-  </section>
-
-
-  <section>
     <h2>Upload Image!</h2>
       <label class="myLabel" id="inputLabel">
         <input type="file" id="upload" required/>
@@ -295,26 +261,26 @@
   <section id="map">
   </section>
 
+  <div>
   <script>
   var map;
   function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 40.7920565, lng: -77.8601741},
-      zoom: 8
+      zoom: 15
     });
   }
   </script>
-
-  <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase.js"></script>
-
-  <script src="main.js"></script>
+</div>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWEMQM9l1gdvBTBXaovReSEmYo8yRaFJU&callback=initMap" async defer></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src ="http://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
   <script src ="http://cdn.jsedlivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src ="http://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
   <script src ="vendors/js/jquery.waypoints.min.js"></script>
   <script src="resources/js/script.js"></script>
+
 </body>
 </html>

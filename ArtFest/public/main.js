@@ -1,4 +1,4 @@
-var provider = new firebase.auth.GoogleAuthProvider();
+//var provider = new firebase.auth.GoogleAuthProvider();
 var user;
 var selectedFile;
 
@@ -15,6 +15,12 @@ firebase.initializeApp(config);
 
 // Reference messages collection
 var messagesRef = firebase.database().ref('messages');
+
+var firebaseui = require('firebaseui');
+var provider = new firebase.auth.FacebookAuthProvider();
+var provider = new firebase.auth.TwitterAuthProvider();
+// or for ES6 imports.
+import * as firebaseui from 'firebaseui'
 
 // Listen for form submit
 document.getElementById('contactForm').addEventListener('submit', submitForm);
@@ -57,27 +63,6 @@ function saveMessage(name, email, message){
     message:message
   });
 }
-
-
-// sign in
-
-function signIn() {
-	firebase.auth().signInWithPopup(provider).then(function(result) {
-	  // This gives you a Google Access Token. You can use it to access the Google API.
-	  var token = result.credential.accessToken;
-	  // The signed-in user info.
-	  user = result.user;
-	}).catch(function(error) {
-	  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
-	  // The email of the user's account used.
-	  var email = error.email;
-	  // The firebase.auth.AuthCredential type that was used.
-	  var credential = error.credential;
-	});
-}
-
 
 // image upload
 	document.getElementById("upload").addEventListener('change', handleFileSelect, false);
