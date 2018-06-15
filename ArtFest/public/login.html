@@ -1,42 +1,23 @@
 <!DOCTYPE html>
-
-
-<script src="node_modules/firebaseui/dist/firebaseui.js"></script>
-<link type="text/css" rel="stylesheet" href="node_modules/firebaseui/dist/firebaseui.css" />
-
 <html>
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
-
-<!-- Add additional services you want to use -->
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA9VpnncQtXeiASQ_kuIHSWvv0c2dEteKk",
-    authDomain: "contactform-1be84.firebaseapp.com",
-    databaseURL: "https://contactform-1be84.firebaseio.com",
-    projectId: "contactform-1be84",
-    storageBucket: "contactform-1be84.appspot.com",
-    messagingSenderId: "861580409827"
-  };
-  firebase.initializeApp(config);
-
-
-</script>
-
   <head>
     <meta charset="UTF-8">
     <title>Sample FirebaseUI App</title>
-    <!-- *******************************************************************************************
-       * TODO(DEVELOPER): Paste the initialization snippet from:
-       * Firebase Console > Overview > Add Firebase to your web app. *
-       ***************************************************************************************** -->
+  </head>
+  <body>
+    <!-- The surrounding HTML is left untouched by FirebaseUI. Your app may use that space for branding, controls and other customizations.-->
+    <div id="firebaseui-auth-container"></div>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="main.js"></script>
+
     <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
+
+    <!-- Add additional services you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+
     <script type="text/javascript">
       // FirebaseUI config.
       var uiConfig = {
@@ -59,10 +40,6 @@
       // The start method will wait until the DOM is loaded.
       ui.start('#firebaseui-auth-container', uiConfig);
     </script>
-  </head>
-  <body>
-    <!-- The surrounding HTML is left untouched by FirebaseUI.
-         Your app may use that space for branding, controls and other customizations.-->
-    <div id="firebaseui-auth-container"></div>
   </body>
+
 </html>

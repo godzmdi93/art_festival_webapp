@@ -1,7 +1,3 @@
-//var provider = new firebase.auth.GoogleAuthProvider();
-var user;
-var selectedFile;
-
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyA9VpnncQtXeiASQ_kuIHSWvv0c2dEteKk",
@@ -13,17 +9,21 @@ var config = {
 };
 firebase.initializeApp(config);
 
-// Reference messages collection
-var messagesRef = firebase.database().ref('messages');
-
-var firebaseui = require('firebaseui');
+//var firebaseui = require('firebaseui');
+var provider = new firebase.auth.GoogleAuthProvider();
 var provider = new firebase.auth.FacebookAuthProvider();
 var provider = new firebase.auth.TwitterAuthProvider();
 // or for ES6 imports.
-import * as firebaseui from 'firebaseui'
+
+// Contact Us
+// Reference messages collection
+var messagesRef = firebase.database().ref('messages');
 
 // Listen for form submit
-document.getElementById('contactForm').addEventListener('submit', submitForm);
+var el = document.getElementById('contactForm');
+if(el){
+  el.addEventListener('submit', submitForm);
+}
 
 // Submit form
 function submitForm(e){
@@ -65,8 +65,9 @@ function saveMessage(name, email, message){
 }
 
 // image upload
-	document.getElementById("upload").addEventListener('change', handleFileSelect, false);
+var selectedFile;
 
+document.getElementById("upload").addEventListener('change', handleFileSelect, false);
 
 function handleFileSelect(event) {
 	$(".upload-group").show();

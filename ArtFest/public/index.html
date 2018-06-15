@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-<script src="https://www.gstatic.com/firebasejs/5.0.0/firebase.js"></script>
-
-  <!-- Add additional services you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script>
-  <script src="main.js"></script>
-
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +22,7 @@
           <li><a href="#looks">quick look </a></li>
           <li><a href="#artists">Our Events</a></li>
           <li><a href="#contactus">Contact Us</a></li>
-          <li><a href="#map">Map</a></li>
+          <li><a href="#location">Map</a></li>
         </ul>
         <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
       </div>
@@ -181,8 +171,8 @@
     <div class="row">
       <h2>Contact us</h2>
     </div>
-    <div class="row">
-      <form method="post" id="contactForm" action="#" class ="contact-form">
+    <div class="alert">Your message has been sent</div>
+      <form id="contactForm">
         <div class="row">
           <div class="col span-1-of-3">
             <label for="name">Name</label>
@@ -201,26 +191,6 @@
         </div>
         <div class="row">
           <div class="col span-1-of-3">
-            <label for ="find-us">How did you hear about us?</label>
-          </div>
-          <div class="col span-2-of-3">
-            <select name="find-us" id="find-us">
-              <option value="friends" selected>Friends</option>
-              <option value="ad">Advertisement</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col span-1-of-3">
-            <label>Liked our offer?</label>
-          </div>
-          <div class="col span-2-of-3">
-            <input type="checkbox" name="box" id="box" checked> Yes!
-          </div>
-        </div>
-        <div class="row">
-          <div class="col span-1-of-3">
             <label>Ask your question here</label>
           </div>
           <div class="col span-2-of-3">
@@ -228,15 +198,11 @@
           </div>
         </div>
         <div class="row">
-          <div class="col span-1-of-3">
-            <label>&nbsp;</label>
-          </div>
           <div class="col span-2-of-3">
-            <input type="submit" value="Send">
+            <button type="submit">Send</button>
           </div>
         </div>
       </form>
-    </div>
   </section>
 
   <section>
@@ -272,6 +238,11 @@
   }
   </script>
 </div>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+<!-- Add additional services you want to use -->
+<script src="main.js"></script>
+  <!-- Google Maps -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWEMQM9l1gdvBTBXaovReSEmYo8yRaFJU&callback=initMap" async defer></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
