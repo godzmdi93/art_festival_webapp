@@ -19,6 +19,23 @@ var provider = new firebase.auth.TwitterAuthProvider();
 // Reference messages collection
 var messagesRef = firebase.database().ref('messages');
 
+// image download - display on website
+var list = [];
+var i;
+var img_get = firebase.database().ref('img_url');
+img_get.on('value',function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+      list.push(childSnapshot.child("urls").val());
+    });
+    var container = document.getElementById("test1");
+    var len = list.length-1;
+    var lenM = len - 8;
+for( i=len; i>lenM ; i--){
+  container.insertAdjacentHTML('beforeend', '<li> <figure class ="arts-photo"> <img src="'+list[i]+'"> </figure> </li>');
+  console.log(i);
+};
+})
+
 // Listen for form submit
 var el = document.getElementById('contactForm');
 if(el){
@@ -75,20 +92,31 @@ function handleFileSelect(event) {
 };
 
 function confirmUpload() {
-	var metadata = {
-		contentType: 'image',
-		customMetadata: {
-			'dogType': 'Lab',
-			'uploadedBy': 'someone',
-			'title': $("#imgTitle").val(),
-			'caption': $("#imgDesc").val()
-		},
-	};
-	var uploadTask = firebase.storage().ref().child('images/' + selectedFile.name).put(selectedFile, metadata);
-	// Register three observers:
-	// 1. 'state_changed' observer, called any time the state changes
-	// 2. Error observer, called on failure
-	// 3. Completion observer, called on successful completion
+
+    var metadata = {
+        contentType: 'image',
+        customMetadata: {
+          'uploadedBy': 'someone',
+          'title': $("#imgTitle").val(),
+          'caption': $("#imgDesc").val()
+        },
+      };
+      var uploadTask = firebase.storage().ref().child('images/' + selectedFile.name).put(selectedFile, metadata);
+
+      // image download
+      var downloadTask = firebase.storage().ref().child('images/' + selectedFile.name);
+
+      downloadTask.getDownloadURL().then(function(url) {
+        console.log(url);
+
+        var urlRef = firebase.database().ref('img_url').push();
+        urlRef.set({
+          urls : url,
+          name : selectedFile.name
+        });
+      })
+      // end of download
+
 	uploadTask.on('state_changed', function(snapshot){
   		// Observe state change events such as progress, pause, and resume
   		// See below for more detail
@@ -101,5 +129,4 @@ function confirmUpload() {
   		$(".upload-group").hide();
 
 	});
-
 }
