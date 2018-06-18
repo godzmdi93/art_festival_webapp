@@ -29,7 +29,12 @@
     </nav>
     <div class="hero-text-box">
       <h1>Art Everywhere!</h1>
-      <a class="btn btn-full btn-js-11" onclick=href="login.html">Log In</a>
+
+      <!-- created login and signout button  Junwoo Seo -->
+      <a class="btn btn-full btn-js-11" onclick=href="login.html" id= "login_button">Log In</a>
+      <a class="btn btn-full btn-js-11" onclick="signout()" id= "signout_button">Sign out</a>
+
+      
     </div>
   </header>
   <section class="section-features js--section-features" id="features">
@@ -163,7 +168,7 @@
       </form>
   </section>
 
-  <section>
+  <section id = "upload_everything">
     <h2>Upload Image!</h2>
       <label class="myLabel" id="inputLabel">
         <input type="file" id="upload" required/>

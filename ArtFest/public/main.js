@@ -9,33 +9,98 @@ var config = {
 };
 firebase.initializeApp(config);
 
-//var firebaseui = require('firebaseui');
+// this is to get the library to login with google facebook and twitter.
 var provider = new firebase.auth.GoogleAuthProvider();
 var provider = new firebase.auth.FacebookAuthProvider();
 var provider = new firebase.auth.TwitterAuthProvider();
 // or for ES6 imports.
 
+
+
+//********************************  Check if the User is logined and hide the button and uploading picutre *****************
+//Ask Junwoo Seo
+
+//getting id from the index.html 
+
+//login button
+var signI = document.getElementById("login_button");
+
+//sign out button
+var signO = document.getElementById("signout_button");
+//img_up button
+var img_up = document.getElementById("upload_everything");
+
+//check if the user is signed in
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log(signI);
+
+    //hide the sign in button
+    signI.style.visibility = 'hidden';
+    console.log(user);
+
+
+  } else {
+
+    //hide the signout button and image upload section if user is not logined 
+    signO.style.visibility = 'hidden';
+    img_up.style.visibility = 'hidden';
+        console.log(user);
+
+  }
+});
+//******************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//********************************  login out when user press the sign out button *****************
+//Ask Junwoo Seo
+function signout(){
+  firebase.auth().signOut().then(function() {
+      console.log("sign out success")
+      location.reload();
+
+}).catch(function(error) {
+  // An error happened.
+});
+};
+//********************************  login out when user press the sign out button *****************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//********************************  contact us  *****************
+//ask HJ 
+
+
 // Contact Us
 // Reference messages collection
 var messagesRef = firebase.database().ref('messages');
-
-// image download - display on website
-var list = [];
-var i;
-var img_get = firebase.database().ref('img_url');
-img_get.on('value',function(snapshot) {
-  snapshot.forEach(function(childSnapshot) {
-      list.push(childSnapshot.child("urls").val());
-    });
-    var container = document.getElementById("test1");
-    var len = list.length-1;
-    var lenM = len - 8;
-for( i=len; i>lenM ; i--){
-  container.insertAdjacentHTML('beforeend', '<li> <figure class ="arts-photo"> <img src="'+list[i]+'"> </figure> </li>');
-  console.log(i);
-};
-})
-
 // Listen for form submit
 var el = document.getElementById('contactForm');
 if(el){
@@ -66,11 +131,6 @@ function submitForm(e){
   document.getElementById('contactForm').reset();
 }
 
-// Function to get get form values
-function getInputVal(id){
-  return document.getElementById(id).value;
-}
-
 // Save message to firebase
 function saveMessage(name, email, message){
   var newMessageRef = messagesRef.push();
@@ -81,7 +141,93 @@ function saveMessage(name, email, message){
   });
 }
 
-// image upload
+
+//********************************  contact us  *****************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//********************************  img diplay   ***************************
+// ask Junwoo or HJ
+
+
+// image download - display on website
+var list = [];
+var i;
+var img_get = firebase.database().ref('img_url');
+img_get.on('value',function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+      list.push(childSnapshot.child("urls").val());
+    });
+    var container = document.getElementById("test1");
+    var len = list.length-1;
+    var lenM = len - 8;
+for( i=len; i>lenM ; i--){
+  container.insertAdjacentHTML('beforeend', '<li> <figure class ="arts-photo"> <img src="'+list[i]+'"> </figure> </li>');
+  console.log(i);
+};
+})
+//********************************  img diplay   ***************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Function to get get form values
+function getInputVal(id){
+  return document.getElementById(id).value;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//********************************  img upload  *****************
+//ask HJ or Junwoo
 var selectedFile;
 
 document.getElementById("upload").addEventListener('change', handleFileSelect, false);
@@ -93,10 +239,11 @@ function handleFileSelect(event) {
 
 function confirmUpload() {
 
+    var user = firebase.auth().currentUser.email;
     var metadata = {
         contentType: 'image',
         customMetadata: {
-          'uploadedBy': 'someone',
+          'uploadedBy': user,
           'title': $("#imgTitle").val(),
           'caption': $("#imgDesc").val()
         },
@@ -115,6 +262,7 @@ function confirmUpload() {
           name : selectedFile.name
         });
       })
+
       // end of download
 
 	uploadTask.on('state_changed', function(snapshot){
@@ -127,6 +275,12 @@ function confirmUpload() {
   		// For instance, get the download URL: https://firebasestorage.googleapis.com/...
   		$(".upload-group")[0].before("Success!");
   		$(".upload-group").hide();
+                  location.reload();
+
 
 	});
 }
+
+
+//********************************  img upload  *****************
+//ask HJ or Junwoo

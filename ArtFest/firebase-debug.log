@@ -1,0 +1,86 @@
+[debug] [2018-06-17T15:47:17.052Z] ----------------------------------------------------------------------
+[debug] [2018-06-17T15:47:17.057Z] Command:       /usr/local/Cellar/node/10.4.0/bin/node /usr/local/bin/firebase serve
+[debug] [2018-06-17T15:47:17.057Z] CLI Version:   3.18.6
+[debug] [2018-06-17T15:47:17.058Z] Platform:      darwin
+[debug] [2018-06-17T15:47:17.058Z] Node Version:  v10.4.0
+[debug] [2018-06-17T15:47:17.066Z] Time:          Sun Jun 17 2018 11:47:17 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-17T15:47:17.066Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-17T15:47:17.103Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-17T15:47:17.104Z] > authorizing via signed-in user
+[debug] [2018-06-17T15:47:17.108Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-06-17T15:47:17.108Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/7XGEBCBkKtEPztdKfMsBaNWk4m5jEDPwzXRsC7aJ07M',
+  client_id:
+   '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope:
+   'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Jun 17 2018 11:47:17 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-17T15:47:17.419Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-17T15:47:17.433Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/contactform-1be84  
+  
+ Sun Jun 17 2018 11:47:17 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-17T15:47:18.046Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-17T15:47:18.047Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/contactform-1be84/tokens  
+  
+ Sun Jun 17 2018 11:47:18 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-17T15:47:18.474Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-17T15:47:18.475Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/contactform-1be84  
+  
+ Sun Jun 17 2018 11:47:18 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-17T15:47:18.881Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/junwooseo/Desktop/art/art_festival_webapp/ArtFest'...
+[info] 
+[debug] [2018-06-17T15:47:18.883Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/861580409827/clients/_:getWebAppConfig  
+  
+ Sun Jun 17 2018 11:47:18 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-17T15:47:19.623Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-06-18T16:50:39.666Z] ----------------------------------------------------------------------
+[debug] [2018-06-18T16:50:39.668Z] Command:       /usr/local/Cellar/node/10.4.0/bin/node /usr/local/bin/firebase serve
+[debug] [2018-06-18T16:50:39.668Z] CLI Version:   3.18.6
+[debug] [2018-06-18T16:50:39.668Z] Platform:      darwin
+[debug] [2018-06-18T16:50:39.668Z] Node Version:  v10.4.0
+[debug] [2018-06-18T16:50:39.675Z] Time:          Mon Jun 18 2018 12:50:39 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-18T16:50:39.675Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-18T16:50:39.690Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-18T16:50:39.691Z] > authorizing via signed-in user
+[debug] [2018-06-18T16:50:39.693Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-06-18T16:50:39.693Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/7XGEBCBkKtEPztdKfMsBaNWk4m5jEDPwzXRsC7aJ07M',
+  client_id:
+   '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope:
+   'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Jun 18 2018 12:50:39 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-18T16:50:39.872Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-18T16:50:39.893Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/contactform-1be84  
+  
+ Mon Jun 18 2018 12:50:39 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-18T16:50:40.211Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-18T16:50:40.212Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/contactform-1be84/tokens  
+  
+ Mon Jun 18 2018 12:50:40 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-18T16:50:40.650Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-18T16:50:40.651Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/contactform-1be84  
+  
+ Mon Jun 18 2018 12:50:40 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-18T16:50:41.264Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/junwooseo/Desktop/art/art_festival_webapp/ArtFest'...
+[info] 
+[debug] [2018-06-18T16:50:41.267Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/861580409827/clients/_:getWebAppConfig  
+  
+ Mon Jun 18 2018 12:50:41 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-18T16:50:41.572Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
