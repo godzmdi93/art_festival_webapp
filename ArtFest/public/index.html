@@ -53,7 +53,7 @@
           Take photos of you enjoying the art festival and upload them by clicking the icon above and get 5% discount at Waker Chicken!
         </p>
       </div>
-      <div class="col span-1-of-4 box" onclick="location.href='message.html'">
+      <div class="col span-1-of-4 box" onclick="location.href='message.html'" style="cursor: pointer;" >
         <i class="ion-laptop icon-big"></i>
         <h3>Upload your story</h3>
         <p>
@@ -75,7 +75,23 @@
         </p>
       </div>
     </div>
+    <!-- File upload section -->
+    <div class="col span-1-of-4 box" id="upload_everything">
+          <input type="file" id="upload" required/>
+          <span>Select File</span>
+        <div class="input-group upload-group">
+        <input type="text" placeholder="Image Title" id="imgTitle">
+        </div>
+        <div class="input-group upload-group">
+        <input type="text" placeholder="Image Caption" id="imgDesc">
+        </div>
+        <button type="button" class="btn btn-primary upload-group" onclick="confirmUpload()">SUBMIT</button>
+    </div>
   </section>
+  <section>
+    <h3>  <br/> </h3>
+  </section>
+
   <section class = "section-arts">
     <ul class="arts-showcase clearfix" id="test1">
     </ul>
@@ -166,21 +182,6 @@
           </div>
         </div>
       </form>
-  </section>
-
-  <section id = "upload_everything">
-    <h2>Upload Image!</h2>
-      <label class="myLabel" id="inputLabel">
-        <input type="file" id="upload" required/>
-        <span>Select File</span>
-      </label>
-      <div class="input-group upload-group">
-      <input type="text" placeholder="Image Title" id="imgTitle">
-      </div>
-      <div class="input-group upload-group">
-      <input type="text" placeholder="Image Caption" id="imgDesc">
-      </div>
-      <button type="button" class="btn btn-primary upload-group" onclick="confirmUpload()">SUBMIT</button>
   </section>
 
   <div id="location" class="row">
