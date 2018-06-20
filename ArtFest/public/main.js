@@ -16,6 +16,11 @@ var provider = new firebase.auth.TwitterAuthProvider();
 // or for ES6 imports.
 
 
+// Function to get get form values
+function getInputVal(id){
+  return document.getElementById(id).value;
+}
+
 
 //********************************  Check if the User is logined and hide the button and uploading picutre *****************
 //Ask Junwoo Seo
@@ -145,59 +150,13 @@ function saveMessage(name, email, message){
 //********************************  contact us  *****************
 
 
+// reloading all the pages
 
-
-
-
-
-
-//********************************  story  *****************
-//ask HJ
-
-
-// Story
-// Reference stories collection
-var storyRef = firebase.database().ref('story');
-// Listen for form submit
-var el = document.getElementById('storyForm');
-if(el){
-  el.addEventListener('submit', submitForm);
-}
-
-// Submit form
-function submitForm(e){
-  e.preventDefault();
-
-  // Get values
-  var tag = getInputVal('tag');
-  var story = getInputVal('story');
-
-  // Save message
-  saveStory(tag, story);
-
-  // Show alert
-  document.querySelector('.alert').style.display = 'block';
-
-  // Hide alert after 3 seconds
-  setTimeout(function(){
-    document.querySelector('.alert').style.display = 'none';
-  },3000);
-
-  // Clear form
-  document.getElementById('storyForm').reset();
-}
-
-// Save message to firebase
-function saveStory(tag, story){
-  var newStoryRef = storyRef.push();
-  newStoryRef.set({
-    tag: tag,
-    story:story
-  });
+function reload(){
+  location.reload();
 }
 
 
-//********************************  story  *****************
 
 
 
@@ -208,38 +167,63 @@ function saveStory(tag, story){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-//********************************  story diplay   ***************************
+//********************************  artist diplay   ***************************
 // ask HJ
 
 
 // story download - display on website
-var list = [];
+var fn_list = [];
+var ln_list = [];
+var bn_list = [];
+var booth_list = [];
+var type_list = [];
+var website_list = [];
 var i;
-var story_get = firebase.database().ref('story');
-story_get.on('value',function(snapshot) {
+var artist_get = firebase.database().ref('Artist');
+artist_get.on('value',function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
-      list.push(childSnapshot.child("story").val());
+      fn_list.push(childSnapshot.child("First_Name").val());
+      ln_list.push(childSnapshot.child("Last_Name").val());
+      bn_list.push(childSnapshot.child("Business_Name").val());
+      booth_list.push(childSnapshot.child("Booth").val());
+      type_list.push(childSnapshot.child("Medium_Category").val());
+      website_list.push(childSnapshot.child("Website").val());
     });
-    var container = document.getElementById("test2");
-for( i=0; i < list.length; i++){
-  container.insertAdjacentHTML('beforeend', '<div> <p>' + list[i] + '</p> </div>');
+    var container3 = document.getElementById("test3");
+for( i=0; i < 3; i++){
+  container3.insertAdjacentHTML
+  ('beforeend', '<blockquote> Hey, my name is '+ fn_list[i] +' ' + ln_list[i] + 'and my business name is ' + bn_list[i] + 'My interest area of art is ' + type_list[i] + 'and I will have tons of beautiful art pieces for you guys to buy and enjoy. Come visit my booth' + booth_list[i] + 'on Allen Street! <cite><img src ="resources/img/andrew.jpg">' + website_list[i] + '</cite> </blockquote>');
   console.log(i);
 };
 })
 
-//********************************  img diplay   ***************************
+//********************************  artist diplay   ***************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -296,10 +280,6 @@ for( i=len; i>lenM ; i--){
 
 
 
-// Function to get get form values
-function getInputVal(id){
-  return document.getElementById(id).value;
-}
 
 
 

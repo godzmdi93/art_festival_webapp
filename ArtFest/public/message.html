@@ -37,7 +37,7 @@
       </div>
       <div class="row">
         <div class="col span-2-of-3">
-          <button type="submit">Send</button>
+          <button type="submit" onclick="reload()">Send</button>
           <button type="button" onclick="location.href='index.html'">Back</button>
         </div>
       </div>
@@ -45,12 +45,14 @@
 </section>
 
 <section class = "section-arts">
-  <div class="arts-showcase clearfix" id="test2">
+  <div class="arts-showcase clearfix">
+    <ul id="test2">
+    </ul>
   </div>
 </section>
 
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <!-- Add additional services you want to use -->
-<script src="main.js"></script>
+<script src="message.js"></script>
 </body>
 </html>
