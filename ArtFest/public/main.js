@@ -20,7 +20,7 @@ var provider = new firebase.auth.TwitterAuthProvider();
 //********************************  Check if the User is logined and hide the button and uploading picutre *****************
 //Ask Junwoo Seo
 
-//getting id from the index.html 
+//getting id from the index.html
 
 //login button
 var signI = document.getElementById("login_button");
@@ -42,7 +42,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   } else {
 
-    //hide the signout button and image upload section if user is not logined 
+    //hide the signout button and image upload section if user is not logined
     signO.style.visibility = 'hidden';
     img_up.style.visibility = 'hidden';
         console.log(user);
@@ -95,7 +95,7 @@ function signout(){
 
 
 //********************************  contact us  *****************
-//ask HJ 
+//ask HJ
 
 
 // Contact Us
@@ -150,6 +150,96 @@ function saveMessage(name, email, message){
 
 
 
+
+//********************************  story  *****************
+//ask HJ
+
+
+// Story
+// Reference stories collection
+var storyRef = firebase.database().ref('story');
+// Listen for form submit
+var el = document.getElementById('storyForm');
+if(el){
+  el.addEventListener('submit', submitForm);
+}
+
+// Submit form
+function submitForm(e){
+  e.preventDefault();
+
+  // Get values
+  var tag = getInputVal('tag');
+  var story = getInputVal('story');
+
+  // Save message
+  saveStory(tag, story);
+
+  // Show alert
+  document.querySelector('.alert').style.display = 'block';
+
+  // Hide alert after 3 seconds
+  setTimeout(function(){
+    document.querySelector('.alert').style.display = 'none';
+  },3000);
+
+  // Clear form
+  document.getElementById('storyForm').reset();
+}
+
+// Save message to firebase
+function saveStory(tag, story){
+  var newStoryRef = storyRef.push();
+  newStoryRef.set({
+    tag: tag,
+    story:story
+  });
+}
+
+
+//********************************  story  *****************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//********************************  story diplay   ***************************
+// ask HJ
+
+
+// story download - display on website
+var list = [];
+var i;
+var story_get = firebase.database().ref('story');
+story_get.on('value',function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+      list.push(childSnapshot.child("story").val());
+    });
+    var container = document.getElementById("test2");
+for( i=0; i < list.length; i++){
+  container.insertAdjacentHTML('beforeend', '<div> <p>' + list[i] + '</p> </div>');
+  console.log(i);
+};
+})
+
+//********************************  img diplay   ***************************
 
 
 
