@@ -59,6 +59,22 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
 
+//****************reloading page and send it to popup html page which is img upload page***************************
+function img_direct(){
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      window.location="http://localhost:5000/popup.html";
+
+
+    } else {
+
+
+    }
+  });
+}
+//******************************************************************
+
+
 
 
 

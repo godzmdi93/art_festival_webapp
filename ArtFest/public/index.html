@@ -44,7 +44,9 @@
       </p>
     </div>
     <div class ="row js--wp-1">
-      <div class="col span-1-of-4 box">
+
+      <!-- if user is not logged in, cant view upload img page -->
+      <div class="col span-1-of-4 box" onclick="img_direct()" style="cursor: pointer;">
         <i class="ion-images icon-big"></i>
         <h3>Take photos</h3>
         <p>
@@ -167,56 +169,95 @@
   </section>
 
   <!-- Map function -->
- <!-- Ask Junwoo Seo -->
-   <div id="location" class="row">
-     <h2>Location</h2>
+  <!-- Ask Junwoo Seo -->
+    <div id="location" class="row">
+      <h2>Location</h2>
 
-   </div>
-   <section id="map">
-   </section>
+    </div>
+    <section id="map">
+    </section>
 
-   <div>
-   <script>
-   var map;
-   function initMap() {
-     map = new google.maps.Map(document.getElementById('map'), {
-       center: {lat: 40.7920565, lng: -77.8601741},
-       zoom: 14
-     });
+    <div>
+    <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 40.7920565, lng: -77.8601741},
+        zoom: 14
+      });
 
-     var iconBase = 'https://maps.google.com/mapfiles/kml/';
-     var icons = {
-       parking: {
-         icon: iconBase + 'shapes/parking_lot_maps.png'
-       },
-       food : {
-         icon : iconBase + 'pal2/icon40.png'
-       }
-     };
-
-     var features = [
-     {
-             position: new google.maps.LatLng(40.791987, -77.861131),
-             type: 'parking'
-     },
-     //     {
-     //         position: new google.maps.LatLng(-33.91721, 151.22630),
-     //         type: 'parking'
-     // },
+      var iconBase = 'https://maps.google.com/mapfiles/kml/';
+      var icons = {
+        parking: {
+          icon: iconBase + 'shapes/parking_lot_maps.png'
+        },
+        food : {
+          icon : iconBase + 'pal2/icon40.png'
+        }
+      };
 
 
-     ];
+// adding markers in the map
+      var features = [
 
-     features.forEach(function(feature) {
-           var marker = new google.maps.Marker({
-             position: feature.position,
-             icon: icons[feature.type].icon,
-             map: map
-           });
-         });
-   }
-   </script>
- </div>
+
+      {
+              position: new google.maps.LatLng(40.791987, -77.861131),
+              type: 'parking'
+      },
+          {
+              position: new google.maps.LatLng(40.796299, -77.857700),
+              type: 'food'
+      },
+        {
+              position: new google.maps.LatLng(40.795879, -77.858720),
+              type: 'food'
+      },
+             {
+              position: new google.maps.LatLng(40.793091, -77.863122),
+              type: 'food'
+      },
+                  {
+              position: new google.maps.LatLng(40.798609, -77.856185),
+              type: 'food'
+      },
+                      {
+              position: new google.maps.LatLng(40.798228, -77.855521),
+              type: 'food'
+      },
+
+
+
+
+      ];
+
+// polyline in allenstreet
+      var flightPlanCoordinates = [
+
+         {lat: 40.794461, lng: -77.861557},
+         {lat: 40.793438, lng: -77.860291}
+       ];
+
+       var flightPath = new google.maps.Polyline({
+         path: flightPlanCoordinates,
+         geodesic: true,
+         strokeColor: '#FF0000',
+         strokeOpacity: 4.0,
+         strokeWeight: 11
+       });
+
+         flightPath.setMap(map);
+
+      features.forEach(function(feature) {
+            var marker = new google.maps.Marker({
+              position: feature.position,
+              icon: icons[feature.type].icon,
+              map: map
+            });
+          });
+    }
+    </script>
+  </div>
 
 
 
