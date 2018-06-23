@@ -106,7 +106,7 @@ story_get.on('value',function(snapshot) {
     var container2 = document.getElementById("test2");
     console.log(container2);
 for( i=0; i < list_story.length; i++){
-  container2.insertAdjacentHTML('beforeend', '<div> <p>' + list_story[i] + '</p> </div>');
+  container2.insertAdjacentHTML('beforeend', '<div class = "col span-1-of-3"><blockquote>' + list_story[i] + '</blockquote></div>');
 };
 });
 

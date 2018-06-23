@@ -275,14 +275,13 @@ header {
 .arts-showcase {
     list-style: none;
     width: 100%;
-
 }
 
 .arts-showcase li{
     display: block;
     float: left;
-    width: 25%;
-
+    max-width:259px;
+    max-height: 194px;
 }
 
 .arts-photo {

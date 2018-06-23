@@ -208,7 +208,7 @@ artist_get.on('value',function(snapshot) {
     var container3 = document.getElementById("test3");
 for( i=0; i < 3; i++){
   container3.insertAdjacentHTML
-  ('beforeend', '<blockquote> Hey, my name is '+ fn_list[i] +' ' + ln_list[i] + 'and my business name is ' + bn_list[i] + 'My interest area of art is ' + type_list[i] + 'and I will have tons of beautiful art pieces for you guys to buy and enjoy. Come visit my booth' + booth_list[i] + 'on Allen Street! <cite><img src ="resources/img/andrew.jpg">' + website_list[i] + '</cite> </blockquote>');
+  ('beforeend', '<div class="col span-1-of-3"><blockquote> Hey, my name is '+ fn_list[i] +' ' + ln_list[i] + ' and my business name is ' + bn_list[i] + '. My interest area of art is ' + type_list[i] + ' and I will have tons of beautiful art pieces for you guys to buy and enjoy. Come visit my booth ' + booth_list[i] + ' on Allen Street! <cite><img src ="resources/img/memofest.png">' + website_list[i] + '</cite> </blockquote></div>');
   console.log(i);
 };
 })
