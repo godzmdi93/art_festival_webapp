@@ -53,7 +53,7 @@
           Take photos of you enjoying the art festival and upload them by clicking the icon above and get 5% discount at Waker Chicken!
         </p>
       </div>
-      <div class="col span-1-of-4 box" onclick="location.href='message.html'" style="cursor: pointer;" >
+      <div class="col span-1-of-4 box" onclick="story_direct()" style="cursor: pointer;" >
         <i class="ion-laptop icon-big"></i>
         <h3>Upload your story</h3>
         <p>
@@ -151,6 +151,7 @@
       </form>
   </section>
 
+
   <!-- Map function -->
   <!-- Ask Junwoo Seo -->
     <div id="location" class="row">
@@ -161,6 +162,28 @@
     </section>
 
     <div>
+
+
+
+
+<!--       TALK to HANNNNN!!!!
+ --><!--       <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style> -->
+
+
     <script>
     var map;
     function initMap() {
@@ -180,67 +203,60 @@
       };
 
 
-// adding markers in the map
-      var features = [
+var walker = new google.maps.Marker({map: map, 
+  position: new google.maps.LatLng(40.796088, -77.8577317), 
+  icon: { url: "resources/img/walker.png",
+          scaledSize: new google.maps.Size(20, 20)}
+    });
 
 
-      {
-              position: new google.maps.LatLng(40.791987, -77.861131),
-              type: 'parking'
-      },
-          {
-              position: new google.maps.LatLng(40.796299, -77.857700),
-              type: 'food'
-      },
-        {
-              position: new google.maps.LatLng(40.795879, -77.858720),
-              type: 'food'
-      },
-             {
-              position: new google.maps.LatLng(40.793091, -77.863122),
-              type: 'food'
-      },
-                  {
-              position: new google.maps.LatLng(40.798609, -77.856185),
-              type: 'food'
-      },
-                      {
-              position: new google.maps.LatLng(40.798228, -77.855521),
-              type: 'food'
-      },
+var tea_time = new google.maps.Marker({map: map, 
+  position: new google.maps.LatLng(40.7956353, -77.8586985), 
+  icon: { url: "resources/img/tea_time.jpg",
+          scaledSize: new google.maps.Size(20, 20)}
+    });
 
 
+var momo = new google.maps.Marker({map: map, 
+  position: new google.maps.LatLng(40.792864 ,-77.8631108), 
+  icon: { url: "resources/img/momo.jpg",
+          scaledSize: new google.maps.Size(21, 21)}
+    });
+
+var tommy = new google.maps.Marker({map: map, 
+  position: new google.maps.LatLng(40.798304,-77.856158), 
+  icon: { url: "resources/img/tommy.png",
+          scaledSize: new google.maps.Size(21, 21)}
+    });
+
+var hungry = new google.maps.Marker({map: map, 
+  position: new google.maps.LatLng(40.798228,-77.855521), 
+  icon: { url: "resources/img/hungry.png",
+          scaledSize: new google.maps.Size(21, 21)}
+    });
 
 
-      ];
+var dirService = new google.maps.DirectionsService();
+var dirRenderer = new google.maps.DirectionsRenderer({suppressMarkers: true});
+dirRenderer.setMap(map);
 
-// polyline in allenstreet
-      var flightPlanCoordinates = [
+// highlight a street
+var request = {
+    origin: "40.792793, -77.864030",
+    destination: "40.791209, -77.860028",
+    waypoints: [{location:"40.794681, -77.866616"}, {location:"40.796444, -77.864234"}, {location:"40.791160, -77.856262"}, {location:"40.789674, -77.858054"}],
+    travelMode: google.maps.TravelMode.WALKING
+};
+dirService.route(request, function(result, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+        dirRenderer.setDirections(result);
+    }
+});
 
-         {lat: 40.794461, lng: -77.861557},
-         {lat: 40.793438, lng: -77.860291}
-       ];
-
-       var flightPath = new google.maps.Polyline({
-         path: flightPlanCoordinates,
-         geodesic: true,
-         strokeColor: '#FF0000',
-         strokeOpacity: 4.0,
-         strokeWeight: 11
-       });
-
-         flightPath.setMap(map);
-
-      features.forEach(function(feature) {
-            var marker = new google.maps.Marker({
-              position: feature.position,
-              icon: icons[feature.type].icon,
-              map: map
-            });
-          });
     }
     </script>
   </div>
+
 
 
 

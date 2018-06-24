@@ -61,21 +61,30 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 //****************reloading page and send it to popup html page which is img upload page***************************
 function img_direct(){
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      window.location="http://localhost:5000/popup.html";
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+      window.location.href="/popup.html";
+  } else {
+      window.location.href="/login.html";
+  }
+});
+
+};
 
 
-    } else {
+function story_direct(){
 
 
-    }
-  });
-}
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+      window.location.href="/message.html";
+  } else {
+      window.location.href="/login.html";
+  }
+});  
+};
 //******************************************************************
-
-
-
 
 
 
