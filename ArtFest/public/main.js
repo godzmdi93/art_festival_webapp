@@ -82,7 +82,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   } else {
       window.location.href="/login.html";
   }
-});  
+});
 };
 //******************************************************************
 
@@ -149,13 +149,8 @@ function submitForm(e){
   // Save message
   saveMessage(name, email, message);
 
-  // Show alert
-  document.querySelector('.alert').style.display = 'block';
-
-  // Hide alert after 3 seconds
-  setTimeout(function(){
-    document.querySelector('.alert').style.display = 'none';
-  },3000);
+  // alert message
+  confirmation();
 
   // Clear form
   document.getElementById('contactForm').reset();
@@ -181,7 +176,10 @@ function reload(){
   location.reload();
 }
 
-
+function confirmation(){
+  alert("Your message has been sent!");
+  location.reload();
+}
 
 
 

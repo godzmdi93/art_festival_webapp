@@ -15,12 +15,12 @@
   <header>
     <nav class="sticky">
       <div class="row">
-        <img src="resources/css/img/logo.png" alt ="Art Festival logo" class="logo">
-        <img src="resources/css/img/logo-1.png" alt ="Art Festival logo" class="logo-1">
+        <img src="resources/img/memofest.png" alt ="Art Festival logo" class="logo">
+        <img src="resources/img/memofest.png" alt ="Art Festival logo" class="logo-1">
         <ul class="main-nav js--main-nav">
-          <li><a href="#features">Get discount</a></li>
-          <li><a href="#looks">quick look </a></li>
-          <li><a href="#artists">Our Events</a></li>
+          <li><a href="#features">Deals</a></li>
+          <li><a href="#looks">Photos</a></li>
+          <li><a href="#artists">Artists</a></li>
           <li><a href="#contactus">Contact Us</a></li>
           <li><a href="#location">Map</a></li>
         </ul>
@@ -28,7 +28,7 @@
       </div>
     </nav>
     <div class="hero-text-box">
-      <h1>Art Everywhere!</h1>
+      <h1>Art Everywhere</h1>
 
       <!-- created login and signout button  Junwoo Seo -->
       <a class="btn btn-full btn-js-11" onclick=href="login.html" id= "login_button">Log In</a>
@@ -40,7 +40,7 @@
     <div class="row">
       <h2>Get various discounts on food and drinks!</h2>
       <p class="long-copy">
-        Hello, we're Artsy, a group of aesthetes at Penn State. Enjoying great food and drinks is one of the best parts of the festival. Let us take care of your hunger and quench your thirst!
+        Greetings! We are MemoFest, a group of aesthetes at Penn State. Enjoying great food and drinks is one of the best parts of the festival. Let us take care of your hunger and quench your thirst!
       </p>
     </div>
     <div class ="row js--wp-1">
@@ -50,28 +50,28 @@
         <i class="ion-images icon-big"></i>
         <h3>Take photos</h3>
         <p>
-          Take photos of you enjoying the art festival and upload them by clicking the icon above and get 5% discount at Waker Chicken!
+          Take photos of you enjoying the art festival and upload them by clicking the icon above and get 10% discount at Waker Chicken!
         </p>
       </div>
       <div class="col span-1-of-4 box" onclick="story_direct()" style="cursor: pointer;" >
         <i class="ion-laptop icon-big"></i>
         <h3>Upload your story</h3>
         <p>
-          Tell us about your story or experience you are having at the festival and get 10% discount at Momotaro!
+          Tell us about your story from the festival and get 10% discount at Momotaro and 5% discount at Teatime!
         </p>
       </div>
       <div class="col span-1-of-4 box">
         <i class="ion-trophy icon-big"></i>
         <h3>birthday discount</h3>
         <p>
-          Happy Birthday! If today is your birthday, get your free bottle of beer at Bill Pickles Tap Room located on Allen Street!
+          Happy Birthday! If today is your birthday, get your 10% on orders over $20 at Xi An Grill located on Allen Street!
         </p>
       </div>
       <div class="col span-1-of-4 box">
         <i class="ion-card icon-big"></i>
         <h3>Buy a piece of art</h3>
         <p>
-          Purchased a piece of art at the festival? Go get a free craft cocktail or any drink of your choice at Chrome !
+          Purchased a piece of art at the festival? Go get a free item or 10% discount at Are U Hungry before 5pm!
         </p>
       </div>
     </div>
@@ -108,7 +108,7 @@
 
   <section class ="section-artistintro js--wp-3" id="artists">
     <div class="row">
-      <h2>Our artists are from all over the country</h2>
+      <h2>Artists from all over the country</h2>
     </div>
     <div class="row"id="test3">
     </div>
@@ -117,7 +117,6 @@
     <div class="row">
       <h2>Contact us</h2>
     </div>
-    <div class="alert">Your message has been sent</div>
       <form id="contactForm">
         <div class="row">
           <div class="col span-1-of-3">
@@ -144,8 +143,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col span-2-of-3">
-            <button type="submit">Send</button>
+          <div style="text-align:center">
+            <button class="btn btn-full btn-js-11" type="submit">Send</button>
           </div>
         </div>
       </form>
@@ -189,7 +188,7 @@
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 40.7920565, lng: -77.8601741},
-        zoom: 14
+        zoom: 25
       });
 
       var iconBase = 'https://maps.google.com/mapfiles/kml/';
@@ -203,34 +202,34 @@
       };
 
 
-var walker = new google.maps.Marker({map: map, 
-  position: new google.maps.LatLng(40.796088, -77.8577317), 
+var walker = new google.maps.Marker({map: map,
+  position: new google.maps.LatLng(40.796088, -77.8577317),
   icon: { url: "resources/img/walker.png",
           scaledSize: new google.maps.Size(20, 20)}
     });
 
 
-var tea_time = new google.maps.Marker({map: map, 
-  position: new google.maps.LatLng(40.7956353, -77.8586985), 
+var tea_time = new google.maps.Marker({map: map,
+  position: new google.maps.LatLng(40.7956353, -77.8586985),
   icon: { url: "resources/img/tea_time.jpg",
           scaledSize: new google.maps.Size(20, 20)}
     });
 
 
-var momo = new google.maps.Marker({map: map, 
-  position: new google.maps.LatLng(40.792864 ,-77.8631108), 
+var momo = new google.maps.Marker({map: map,
+  position: new google.maps.LatLng(40.792864 ,-77.8631108),
   icon: { url: "resources/img/momo.jpg",
           scaledSize: new google.maps.Size(21, 21)}
     });
 
-var tommy = new google.maps.Marker({map: map, 
-  position: new google.maps.LatLng(40.798304,-77.856158), 
+var tommy = new google.maps.Marker({map: map,
+  position: new google.maps.LatLng(40.798304,-77.856158),
   icon: { url: "resources/img/tommy.png",
           scaledSize: new google.maps.Size(21, 21)}
     });
 
-var hungry = new google.maps.Marker({map: map, 
-  position: new google.maps.LatLng(40.798228,-77.855521), 
+var hungry = new google.maps.Marker({map: map,
+  position: new google.maps.LatLng(40.798228,-77.855521),
   icon: { url: "resources/img/hungry.png",
           scaledSize: new google.maps.Size(21, 21)}
     });

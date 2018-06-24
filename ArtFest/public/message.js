@@ -46,13 +46,7 @@ function submitForm(e){
   // Save message
   saveStory(tag, story);
 
-  // Show alert
-  document.querySelector('.alert').style.display = 'block';
-
-  // Hide alert after 3 seconds
-  setTimeout(function(){
-    document.querySelector('.alert').style.display = 'none';
-  },3000);
+  confirmation();
 
   // Clear form
   document.getElementById('storyForm').reset();
@@ -65,6 +59,11 @@ function saveStory(tag, story){
     tag: tag,
     story:story
   });
+}
+
+function confirmation(){
+  alert("Your story has been sent!");
+  location.reload();
 }
 
 
