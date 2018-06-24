@@ -38,20 +38,12 @@ var img_up = document.getElementById("upload_everything");
 //check if the user is signed in
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    console.log(signI);
-
     //hide the sign in button
     signI.style.visibility = 'hidden';
-    console.log(user);
-
-
   } else {
-
     //hide the signout button and image upload section if user is not logined
     signO.style.visibility = 'hidden';
     img_up.style.visibility = 'hidden';
-        console.log(user);
-
   }
 });
 //******************************************************************
@@ -102,7 +94,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 //Ask Junwoo Seo
 function signout(){
   firebase.auth().signOut().then(function() {
-      console.log("sign out success")
       location.reload();
 
 }).catch(function(error) {
@@ -216,7 +207,6 @@ artist_get.on('value',function(snapshot) {
 for( i=0; i < 3; i++){
   container3.insertAdjacentHTML
   ('beforeend', '<div class="col span-1-of-3"><blockquote> Hey, my name is '+ fn_list[i] +' ' + ln_list[i] + ' and my business name is ' + bn_list[i] + '. My interest area of art is ' + type_list[i] + ' and I will have tons of beautiful art pieces for you guys to buy and enjoy. Come visit my booth ' + booth_list[i] + ' on Allen Street! <cite><img src ="resources/img/memofest.png">' + website_list[i] + '</cite> </blockquote></div>');
-  console.log(i);
 };
 })
 
@@ -283,7 +273,6 @@ img_get.on('value',function(snapshot) {
     var lenM = len - 8;
 for( i=len; i>lenM ; i--){
   container.insertAdjacentHTML('beforeend', '<li> <figure class ="arts-photo"> <img src="'+list[i]+'"> </figure> </li>');
-  console.log(i);
 };
 })
 //********************************  img diplay   ***************************
@@ -347,7 +336,6 @@ function confirmUpload() {
       var downloadTask = firebase.storage().ref().child('images/' + selectedFile.name);
 
       downloadTask.getDownloadURL().then(function(url) {
-        console.log(url);
 
         var urlRef = firebase.database().ref('img_url').push();
         urlRef.set({
@@ -369,8 +357,6 @@ function confirmUpload() {
   		$(".upload-group")[0].before("Success!");
   		$(".upload-group").hide();
                   location.reload();
-
-
 	});
 }
 
