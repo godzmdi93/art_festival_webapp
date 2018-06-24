@@ -57,35 +57,36 @@ firebase.auth().onAuthStateChanged(function(user) {
 //******************************************************************
 
 
-  var checking_userr = firebase.auth().current;
-
 
 //****************reloading page and send it to popup html page which is img upload page***************************
 function img_direct(){
 
 
-if (checking_userr) {
-
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
       window.location.href="/popup.html";
-} else {
+  } else {
       window.location.href="/login.html";
-}
+  }
+});
 };
+
+
 //******************************************************************
 
 
 
 
 function story_direct(){
-    var user = firebase.auth().current;
 
-if (checking_userr) {
-
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
       window.location.href="/message.html";
-} else {
+  } else {
       window.location.href="/login.html";
-}
-}
+  }
+});
+};
 
 
 
