@@ -13,8 +13,7 @@
   <title>Art Festival</title>
 </head>
 <body>
-
-  <div class="col span-1-of-4 box" align="center" id="upload_everything">
+  <div class="row span-1-of-4 box" align="center" id="upload_everything">
     <input type="file" id="upload" required/>
     <span>Select File</span>
     <div class="input-group upload-group">
@@ -23,9 +22,8 @@
     <div class="input-group upload-group">
       <input type="text" placeholder="Image Caption" id="imgDesc" input-xs/>
     </div>
-    <div style="text-align:center">
     <button type="button" class="btn btn-full btn-js-11" onclick="confirmUpload()">SUBMIT</button>
-    </div>
+    <button type="button" class="btn btn-full btn-js-11" onclick="location.href='index.html'">BACK</button>
   </div>
   <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 
