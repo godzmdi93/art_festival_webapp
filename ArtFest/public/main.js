@@ -56,13 +56,31 @@ function img_direct(){
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-      window.location.href="/popup.html";
+      $('#wrapper').dialog({
+          autoOpen: false,
+          title: 'Upload Image!'
+      });
+      dialogOpen();
+
   } else {
       window.location.href="/login.html";
   }
 });
 
 };
+
+
+function dialogOpen() {
+$('#wrapper').dialog('open');
+    return false;
+};
+
+(function($){
+    $('input[type="file"]').bind('change',function(){
+        $("#img_text").html($('input[type="file"]').val());
+    });
+})(jQuery)
+
 
 function story_direct(){
 

@@ -71,13 +71,36 @@
 
       <!-- if user is not logged in, cant view upload img page -->
       <div class="col span-1-of-4 box" onclick="img_direct()" style="cursor: pointer;">
+        <div id="wrapper" style="display:none;">
+          <div id="upload_everything">
+                <div class="btn btn-success file-input-wrapper">
+                  <i class="glyphicon glyphicon-plus"></i>
+                  <span>Add files...</span>
+                  <button class="btn-file-input" hidden></button>
+                  <input type="file" name="image" id="upload" value="" />
+                </div>
+                <span id="img_text" style="float: right;
+                margin-right: -80px;
+                margin-top: -14px;"></span>
+            <div class="input-group upload-group">
+              <input type="text" placeholder="Image Title" id="imgTitle" input-xs/>
+            </div>
+            <div class="input-group upload-group">
+              <input type="text" placeholder="Image Caption" id="imgDesc" input-xs/>
+            </div>
+            <div style="text-align:center">
+            <button type="button" align="center" class="btn btn-full btn-js-11" onclick="confirmUpload()">SUBMIT</button>
+            </div>
+          </div>
+        </div>
         <i class="ion-images icon-big"></i>
         <h3>Take photos</h3>
         <p>
           Take photos of you enjoying the art festival and upload them by clicking the icon above and get 10% discount at Waker Chicken!
         </p>
       </div>
-      <div class="col span-1-of-4 box" onclick="story_direct()" style="cursor: pointer;" >
+
+      <div class="col span-1-of-4 box" onclick="story_direct()" style="cursor:pointer;" >
         <i class="ion-laptop icon-big"></i>
         <h3>Upload your story</h3>
         <p>
@@ -280,50 +303,6 @@ dirService.route(request, function(result, status) {
     }
     </script>
   </div>
-
-    <button id="opener">Upload Images!</button>
-        <div id="wrapper">
-          <div id="upload_everything">
-                <div class="btn btn-success file-input-wrapper">
-                  <i class="glyphicon glyphicon-plus"></i>
-                  <span>Add files...</span>
-                  <button class="btn-file-input" hidden></button>
-                  <input type="file" name="image" id="upload" value="" />
-                </div>
-                <span id="img_text" style="float: right;
-                margin-right: -80px;
-                margin-top: -14px;"></span>
-            <div class="input-group upload-group">
-              <input type="text" placeholder="Image Title" id="imgTitle" input-xs/>
-            </div>
-            <div class="input-group upload-group">
-              <input type="text" placeholder="Image Caption" id="imgDesc" input-xs/>
-            </div>
-            <div style="text-align:center">
-            <button type="button" align="center" class="btn btn-full btn-js-11" onclick="confirmUpload()">SUBMIT</button>
-            </div>
-          </div>
-        </div>
-
-  <script type="text/javascript">
-  $('#wrapper').dialog({
-      autoOpen: false,
-      title: 'Upload Image!'
-  });
-  $('#opener').click(function() {
-  $('#wrapper').dialog('open');
-      return false;
-  });
-  </script>
-
-
-  <script type="text/javascript">
-        (function($){
-            $('input[type="file"]').bind('change',function(){
-                $("#img_text").html($('input[type="file"]').val());
-            });
-        })(jQuery)
-    </script>
 
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 
