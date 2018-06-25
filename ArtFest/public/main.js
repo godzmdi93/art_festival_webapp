@@ -64,7 +64,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 };
 
-
 function story_direct(){
 
 
@@ -357,6 +356,7 @@ function confirmUpload() {
   		$(".upload-group")[0].before("Success!");
   		$(".upload-group").hide();
                   location.reload();
+      $(".upload-group").clear(); // doesn't work
 	});
 }
 
