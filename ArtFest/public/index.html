@@ -13,9 +13,9 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
   <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="all" />
-
-  <title>Art Festival</title>
+<title>Art Festival</title>
 </head>
+
 <style type="text/css">
     .file-input-wrapper {
         height: 30px;
@@ -45,7 +45,7 @@
           <li><a href="#features">Deals</a></li>
           <li><a href="#looks">Photos</a></li>
           <li><a href="#artists">Artists</a></li>
-          <li><a href="#contactus">Contact Us</a></li>
+          <li><a href="#contactus">Contact</a></li>
           <li><a href="#location">Map</a></li>
         </ul>
         <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
@@ -167,26 +167,26 @@
     </div>
       <form id="contactForm">
         <div class="row">
-          <div class="col span-1-of-3">
+          <div class="col span-1-of-3" align="right">
             <label for="name">Name</label>
           </div>
-          <div class="col span-2-of-3">
+          <div class="col span-1-of-3">
             <input type="text" name="name" id="name" placeholder="Your name" required>
           </div>
         </div>
         <div class="row">
-          <div class="col span-1-of-3">
+          <div class="col span-1-of-3" align="right">
             <label for="email">Email</label>
           </div>
-          <div class="col span-2-of-3">
+          <div class="col span-1-of-3">
             <input type="email" name="email" id="email" placeholder="Your email" required>
           </div>
         </div>
         <div class="row">
-          <div class="col span-1-of-3">
+          <div class="col span-1-of-3" align="right">
             <label>Ask your question here</label>
           </div>
-          <div class="col span-2-of-3">
+          <div class="col span-1-of-3">
             <textarea name="message" id="message" placeholder="Your message"></textarea>
           </div>
         </div>
@@ -203,33 +203,11 @@
   <!-- Ask Junwoo Seo -->
     <div id="location" class="row">
       <h2>Location</h2>
-
+      <section id="map" text-align="center" style="width:400px; height:400px; margin:10px">
+      </section>
     </div>
-    <section id="map">
-    </section>
 
     <div>
-
-
-
-
-<!--       TALK to HANNNNN!!!!
- --><!--       <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style> -->
-
 
     <script>
     var map;
