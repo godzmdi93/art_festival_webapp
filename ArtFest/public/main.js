@@ -349,6 +349,9 @@ function confirmUpload() {
       };
       var uploadTask = firebase.storage().ref().child('images/' + selectedFile.name).put(selectedFile, metadata);
 
+                  send_email_email();
+
+
       // image download
       var downloadTask = firebase.storage().ref().child('images/' + selectedFile.name);
 
@@ -374,10 +377,25 @@ function confirmUpload() {
   		$(".upload-group")[0].before("Success!");
   		$(".upload-group").hide();
                   location.reload();
-      $(".upload-group").clear(); // doesn't work
 	});
 }
 
 
-//********************************  img upload  *****************
-//ask HJ or Junwoo
+//********************************  send email  *****************
+// ask junwoo
+
+function send_email_email(){
+    var fucklife = firebase.auth().currentUser.email;
+var email = require(['https://cdn.emailjs.com/dist/email.min.js']);
+var tem = document.getElementById("promotion");
+
+var template_params = {
+   "to_email": fucklife,
+ }
+
+var service_id = "default_service";
+var template_id = "hello";
+emailjs.send(service_id,template_id,template_params);
+
+}
+

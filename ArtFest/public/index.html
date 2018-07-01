@@ -8,11 +8,23 @@
   <link rel ="stylesheet" type="text/css" href="vendors/css/animate.css">
   <link rel="stylesheet" type="text/css" href="resources/css/style.css">
   <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
   <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="all" />
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="/require.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_PABm7JqFosZ95e3UkXhAU");
+   })();
+</script>
+
+
+
 <title>Art Festival</title>
 </head>
 
@@ -282,7 +294,6 @@ dirService.route(request, function(result, status) {
     </script>
   </div>
 
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 
   <!-- Add additional services you want to use -->
   <script src="main.js"></script>
