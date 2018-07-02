@@ -5,6 +5,31 @@
         padding: 0 2%; 
     }
     .row { padding: 0 2%;} 
+
+    
+    .test2{
+    
+    max-height: 87.5px;
+    display: flex;
+    
+        
+    float: left;
+    width: 25%;
+    
+    
+}
+    
+    
+    .arts-showcase li{
+  
+    float: left;
+    width: 25%;
+    flex-wrap: wrap;
+    display: flex;
+    
+
+}
+
 }
    
 /*small tablet to big tablet: from 768px to 1012px */
@@ -24,6 +49,31 @@
         margin-left: 150px;  
     }
     .contact-form { width: 80%;}
+    
+
+    .test2{
+    
+    max-height: 85.5px;
+    display: flex;
+    
+        
+    float: left;
+    width: 25%;
+    
+    
+}
+    
+    
+    .arts-showcase li{
+  
+    float: left;
+    width: 25%;
+    flex-wrap: wrap;
+    display: flex;
+    
+
+}
+
 }
 
 
@@ -77,11 +127,63 @@
     }
     .app-screen {
         width: 40%;
+        
     }
+    
+    
+    
+
+    .test2{
+    
+    max-height: 65.5px;
+    display: flex;
+    
+        
+    float: left;
+    width: 25%;
+    
+    
+}
+    
+    
+    .arts-showcase li{
+  
+    float: left;
+    width: 25%;
+    flex-wrap: wrap;
+    display: flex;
+    
+
+}
+
 }
 
 /*all the features go here is device for 480 or less---->small phones */
 @media only screen and (max-width: 480px) {       
     .contact-form{width:100%}
     section {padding:25px 0;}
+    
+    
+    .test2{
+    
+    max-height: 39.5px;
+    display: flex;
+    
+        
+    float: left;
+    width: 25%;
+    
+    
+}
+    
+    
+    .arts-showcase li{
+  
+    float: left;
+    width: 25%;
+    flex-wrap: wrap;
+    display: flex;
+    
+
+}
 }

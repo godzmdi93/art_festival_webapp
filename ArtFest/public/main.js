@@ -289,7 +289,8 @@ img_get.on('value',function(snapshot) {
     var len = list.length-1;
     var lenM = len - 8;
 for( i=len; i>lenM ; i--){
-  container.insertAdjacentHTML('beforeend', '<li> <figure class ="arts-photo"> <img src="'+list[i]+'"> </figure> </li>');
+  container.insertAdjacentHTML('beforeend', '<li class="test2"> <figure class ="arts-photo"> <img class ="hey" src="'+list[i]+'"> </figure> </li>');
+
 };
 })
 //********************************  img diplay   ***************************
@@ -349,8 +350,8 @@ function confirmUpload() {
       };
       var uploadTask = firebase.storage().ref().child('images/' + selectedFile.name).put(selectedFile, metadata);
 
-                  send_email_email();
 
+      send_email_email();
 
       // image download
       var downloadTask = firebase.storage().ref().child('images/' + selectedFile.name);
@@ -381,6 +382,7 @@ function confirmUpload() {
 }
 
 
+
 //********************************  send email  *****************
 // ask junwoo
 
@@ -398,4 +400,3 @@ var template_id = "hello";
 emailjs.send(service_id,template_id,template_params);
 
 }
-
