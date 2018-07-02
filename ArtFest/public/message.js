@@ -15,12 +15,10 @@ var provider = new firebase.auth.FacebookAuthProvider();
 var provider = new firebase.auth.TwitterAuthProvider();
 // or for ES6 imports.
 
-
 // Function to get get form values
 function getInputVal(id){
   return document.getElementById(id).value;
 }
-
 
 //********************************  story  *****************
 //ask HJ
@@ -45,6 +43,8 @@ function submitForm(e){
 
   // Save message
   saveStory(tag, story);
+
+  send_email_email();
 
   confirmation();
 
@@ -110,3 +110,23 @@ for( i=0; i < list_story.length; i++){
 });
 
 //********************************  story diplay   ***************************
+
+
+
+//********************************  send email  *****************
+// ask junwoo
+
+function send_email_email(){
+    var fucklife = firebase.auth().currentUser.email;
+var email = require(['https://cdn.emailjs.com/dist/email.min.js']);
+var tem = document.getElementById("promotion");
+
+var template_params = {
+   "to_email": fucklife,
+ }
+
+var service_id = "default_service";
+var template_id = "hello";
+emailjs.send(service_id,template_id,template_params);
+
+}
