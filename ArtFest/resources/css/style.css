@@ -180,7 +180,7 @@ header {
 }
 
 .logo {
-    height: 120px;
+    height: 80px;
     width: auto;
     float: left;
     margin-top: 20px;
@@ -248,15 +248,15 @@ header {
     top:0;
     left:0;
     width:100%;
-    background-color: rgba(255,255,255,0.98);
-    box-shadow:0 2px 2px #efefef;
+    background-color: rgba(0,0,0,1);
+    box-shadow:0 2px 2px #000;
     z-index: 9999;
 }
 .sticky .main-nav {margin-top: 18px;}
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited{
     padding: 17px 0;
-    color: #555;
+    color: #efefef;
 }
 .sticky .logo {display:none;}
 .sticky .logo-1 {
@@ -416,8 +416,9 @@ cite {
 
 
 cite img {
-    height: 50px;
-    border-radius: 50%;
+    height: 30px;
+    width: auto;
+    border-radius: 0%;
     margin-right: 10px;
     vertical-align: middle;
 }
@@ -470,4 +471,9 @@ input[type=checkbox]{
 .js--wp-1.animated,
 .js--wp-2.animated {
     opacity:1;
+}
+
+/*aligning text*/
+
+.align-element{text-align:right;}
 }
