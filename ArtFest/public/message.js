@@ -113,16 +113,20 @@ for( i=0; i < list_story.length; i++){
 
 
 
+
+
+
+
 //********************************  send email  *****************
 // ask junwoo
 
 function send_email_email(){
-    var fucklife = firebase.auth().currentUser.email;
+    var mylife = firebase.auth().currentUser.email;
 var email = require(['https://cdn.emailjs.com/dist/email.min.js']);
 var tem = document.getElementById("promotion");
 
 var template_params = {
-   "to_email": fucklife,
+   "to_email": mylife,
  }
 
 var service_id = "default_service";
