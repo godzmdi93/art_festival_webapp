@@ -248,7 +248,7 @@ header {
     top:0;
     left:0;
     width:100%;
-    background-color: rgba(0,0,0,1);
+    background-color: #cf6d17;
     box-shadow:0 2px 2px #000;
     z-index: 9999;
 }
