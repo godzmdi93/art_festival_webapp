@@ -8,13 +8,20 @@
   <link rel ="stylesheet" type="text/css" href="vendors/css/animate.css">
   <link rel="stylesheet" type="text/css" href="resources/css/style.css">
   <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
   <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="all" />
-<title>Art Festival</title>
-</head>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="/require.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_PABm7JqFosZ95e3UkXhAU");
+   })();
+</script>
 
 <style type="text/css">
     .file-input-wrapper {
@@ -83,10 +90,10 @@
                 margin-right: -80px;
                 margin-top: -14px;"></span>
             <div class="input-group upload-group">
-              <input type="text" placeholder="Image Title" id="imgTitle" input-xs/>
+              <input type="text" placeholder="Title" id="imgTitle" input-xs/>
             </div>
             <div class="input-group upload-group">
-              <input type="text" placeholder="Image Caption" id="imgDesc" input-xs/>
+              <input type="text" placeholder="Caption" id="imgDesc" input-xs/>
             </div>
             <div style="text-align:center">
             <button type="button" align="center" class="btn btn-full btn-js-11" onclick="confirmUpload()">SUBMIT</button>
@@ -172,7 +179,7 @@
       <h2>Contact us</h2>
     </div>
       <div class="row">
-      <form method="post" action="#" class="contact-form">
+      <form method="post" action="#" class="contact-form" id="contactForm">
         <div class="row">
           <div class="col span-1-of-3">
             <label for="name">Name</label>
@@ -305,8 +312,6 @@ dirService.route(request, function(result, status) {
     }
     </script>
   </div>
-
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 
   <!-- Add additional services you want to use -->
   <script src="main.js"></script>

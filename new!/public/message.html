@@ -8,40 +8,49 @@
   <link rel ="stylesheet" type="text/css" href="vendors/css/animate.css">
   <link rel="stylesheet" type="text/css" href="resources/css/style.css">
   <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="all" />
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="/require.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_PABm7JqFosZ95e3UkXhAU");
+   })();
+</script>
+
   <title>Art Festival</title>
-</head>
+
 <body>
+
 
 <section class="section-form" id="contactus">
     <div class="row">
       <h2>Story board</h2>
     </div>
       <div class="row">
-      <form method="post" action="#" class="contact-form">
+      <form method="post" action="#" class="contact-form" id="storyForm">
         <div class="row">
           <div class="col span-1-of-3">
-            <label for="name">Tag</label>
+            <label for="tag">Tag</label>
           </div>
           <div class="col span-2-of-3">
-            <input type="text" name="name" id="name" placeholder="Your tag" required>
+            <input type="text" name="tag" id="tag" placeholder="Your tag" required>
           </div>
         </div>
-        
+
      <div class="row">
           <div class="col span-1-of-3">
             <label>Tell us your story here</label>
           </div>
           <div class="col span-2-of-3">
-            <textarea name="message" id="message" placeholder="Your story"></textarea>
+            <textarea name="story" id="story" placeholder="Your story"></textarea>
           </div>
         </div>
-          
-    
-    
-          
-          
-          
 
       <div class="row">
         <div align="center">
@@ -62,5 +71,11 @@
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <!-- Add additional services you want to use -->
 <script src="message.js"></script>
+
+<script src ="http://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+<!-- <script src ="http://cdn.jsedlivr.net/html5shiv/3.7.2/html5shiv.min.js"></script> -->
+<script src ="http://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+<script src ="vendors/js/jquery.waypoints.min.js"></script>
+<script src="resources/js/script.js"></script>
 </body>
 </html>

@@ -46,6 +46,8 @@ function submitForm(e){
   // Save message
   saveStory(tag, story);
 
+  send_email_email();
+
   confirmation();
 
   // Clear form
@@ -110,3 +112,23 @@ for( i=0; i < list_story.length; i++){
 });
 
 //********************************  story diplay   ***************************
+
+
+
+//********************************  send email  *****************
+// ask junwoo
+
+function send_email_email(){
+    var mylife = firebase.auth().currentUser.email;
+var email = require(['https://cdn.emailjs.com/dist/email.min.js']);
+var tem = document.getElementById("promotion");
+
+var template_params = {
+   "to_email": mylife,
+ }
+
+var service_id = "default_service";
+var template_id = "hello";
+emailjs.send(service_id,template_id,template_params);
+
+}
