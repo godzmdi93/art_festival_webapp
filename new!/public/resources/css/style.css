@@ -3,6 +3,11 @@
 /* Basic Setup*/
 /*--------------------------------*/
 
+a {
+    color: #e67e22;
+    text-decoration: none;
+}
+
 .hey{
 
     opacity: 0.7;

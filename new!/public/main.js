@@ -199,10 +199,8 @@ function confirmation(){
 
 
 //********************************  artist diplay   ***************************
-// ask HJ
-
-
 // story download - display on website
+/*
 var fn_list = [];
 var ln_list = [];
 var bn_list = [];
@@ -210,7 +208,7 @@ var booth_list = [];
 var type_list = [];
 var website_list = [];
 var i;
-var artist_get = firebase.database().ref('Artist');
+var artist_get = firebase.database().ref('story');
 artist_get.on('value',function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
       fn_list.push(childSnapshot.child("First_Name").val());
@@ -221,9 +219,21 @@ artist_get.on('value',function(snapshot) {
       website_list.push(childSnapshot.child("Website").val());
     });
     var container3 = document.getElementById("test3");
-for( i=0; i < 3; i++){
+for( i=0; i < 20; i++){
   container3.insertAdjacentHTML
-  ('beforeend', '<div class="col span-1-of-3"><blockquote> Hey, my name is '+ fn_list[i] +' ' + ln_list[i] + ' and my business name is ' + bn_list[i] + '. My interest area of art is ' + type_list[i] + ' and I will have tons of beautiful art pieces for you guys to buy and enjoy. Come visit my booth ' + booth_list[i] + ' on Allen Street! <cite><img src ="resources/img/logo25.png">' + website_list[i] + '</cite> </blockquote></div>');
+    ('beforeend', '<div class="col span-1-of-3"><blockquote> Hey, my name is '+ fn_list[i] +' ' + ln_list[i] + ' and my business name is ' + bn_list[i] + '. My interest area of art is ' + type_list[i] + ' and I will have tons of beautiful art pieces for you guys to buy and enjoy. Come visit my booth ' + booth_list[i] + ' on Allen Street! <cite><img src ="resources/img/logo25.png">' + website_list[i] + '</cite> </blockquote></div>');
+*/
+var list_story = [];
+var i;
+var story_get = firebase.database().ref('story');
+story_get.on('value',function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+      list_story.push(childSnapshot.child("story").val());
+    });
+    var container3 = document.getElementById("test3");
+    console.log(container3);
+for( i=0; i < 3; i++){
+  container3.insertAdjacentHTML('beforeend', '<div class = "col span-1-of-3"><blockquote>' + list_story[i] + '</blockquote></div>');
 };
 })
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel ="stylesheet" type="text/css" href="vendors/css/normalize.css">
+  <link rel ="stylesheet" type="text/css" href="vendors/css/grid.css">
+  <link rel ="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+  <link rel ="stylesheet" type="text/css" href="vendors/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+  <title>Art Festival</title>
+</head>
+<body>
+
+<section class="section-form" id="contactus">
+  <div class="row">
+    <h2>Story Board</h2>
+  </div>
+    <form id="storyForm">
+      <div class="row">
+        <div class="col span-1-of-3" align="right">
+          <label for="tag">Tag</label>
+        </div>
+        <div class="col span-1-of-3">
+          <input type="text" name="tag" id="tag" placeholder="#Your tag" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col span-1-of-3" align="right">
+        <label>Tell us your story here</label>
+      </div>
+      <div class="col span-1-of-3">
+        <textarea name="story" id="story" placeholder="Your story" required></textarea>
+      </div>
+    </div>
+      <div class="row">
+        <div align="center">
+          <button type="submit" class="btn btn-full btn-js-11">SEND</button>
+          <button type="button" class="btn btn-full btn-js-11" onclick="location.href='index.html'">BACK</button>
+        </div>
+      </div>
+    </form>
+</section>
+
+<section class ="section-artistintro js--wp-3" id="artists">
+  <div class="row">
+    <h2>Your Stories</h2>
+  </div>
+  <div class="row" id="test2">
+  </div>
+</section>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<!-- Add additional services you want to use -->
+<script src="message.js"></script>
+</body>
+</html>

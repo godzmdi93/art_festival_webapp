@@ -64,7 +64,7 @@ function saveStory(tag, story){
 }
 
 function confirmation(){
-  alert("Your story has been sent!");
+  alert("Discounts have been sent to your registered email!");
   location.reload();
 }
 
