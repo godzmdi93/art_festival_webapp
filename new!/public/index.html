@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memofest</title>
   <link rel ="stylesheet" type="text/css" href="vendors/css/normalize.css">
   <link rel ="stylesheet" type="text/css" href="vendors/css/grid.css">
   <link rel ="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
@@ -53,7 +54,7 @@
           <li><a href="#looks">Photos</a></li>
           <li><a href="#artists">Stories</a></li>
           <li><a href="#contactus">Contact</a></li>
-          <li><a href="#map">Map</a></li>
+          <li><a href="#map">Discount Map</a></li>
         </ul>
         <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
       </div>
@@ -80,15 +81,15 @@
       <div class="col span-1-of-2" steps-box>
         <div class="works-step">
           <div>1</div>
-            <p><a href="login.html" style="color: #e67e22; text-decoration: none;">Signup or login</a> Memofest using your email (we need your email to send discounts to you)</p>
+            <p><a href="login.html" style="color: #e67e22; text-decoration: none;">Signup or login</a> to Memofest using your email</p>
         </div>
         <div class="works-step">
           <div>2</div>
-          <p>Share photos, stories, and experiences of a local festival by choosing one of the following four ways</p>
+          <p>Share festival photos, stories, and memories</p>
         </div>
         <div class="works-step">
           <div>3</div>
-          <p>We will send discounts to your registered email! We may also contact you for a follow-up conversation to chat about your stories and experiences at the festival</p>
+          <p>Your will receive the discount via email! Please note that we might also contact you for an optional follow-up to learn more about your festival experience</p>
           <!-- <p>Share Memofest on social media with your friends and family using our official hashtag #memofest</p> -->
           </div>
     </div>
@@ -111,7 +112,7 @@
           <div id="upload_everything">
                 <div class="btn btn-success file-input-wrapper">
                   <i class="glyphicon glyphicon-plus"></i>
-                  <span>Add files...</span>
+                  <p>Choose a photo</p>
                   <button class="btn-file-input" hidden></button>
                   <input type="file" name="image" id="upload" value="" />
                 </div>
@@ -119,13 +120,13 @@
                 margin-right: -80px;
                 margin-top: -14px;"></span>
             <div class="input-group upload-group">
-              <input type="text" placeholder="Title" id="imgTitle" input-xs/>
+              <input type="text" placeholder="Describe your photo" id="imgTitle" input-xs/>
             </div>
             <div class="input-group upload-group">
-              <input type="text" placeholder="Caption" id="imgDesc" input-xs/>
+              <input type="text" placeholder="Tag" id="imgDesc" input-xs/>
             </div>
             <div style="text-align:center">
-            <button type="button" align="center" class="btn btn-full btn-js-11" onclick="confirmUpload()">SUBMIT</button>
+            <button type="button" align="center" class="btn btn-full btn-js-11" onclick="confirmUpload()">UPLOAD</button>
             </div>
           </div>
         </div>
@@ -233,7 +234,10 @@
     <!-- Map function -->
   <!-- Ask Junwoo Seo -->
     <div>
-      <h2>Location</h2>
+      <h2><a href="https://arts-festival.com/">Arts Festival</a> (July 12-15, 2018)</h2>
+        <div class="row">
+            <center><p style="margin-bottom: 20px;"> Blue line: Arts Festival location; Red dots: discounted food and drinks</p></center>
+        </div>
     <section id="map" class = "street">
     </section>
 
@@ -259,41 +263,34 @@
         }
       };
 
+var labels = ['Waker Chicken', 'Tea-Time', 'Momotaro', 'Xi\'an', 'U'];
 
 var walker = new google.maps.Marker({map: map,
   position: new google.maps.LatLng(40.796088, -77.8577317),
-  icon: { url: "resources/img/walker.png",
-          scaledSize: new google.maps.Size(20, 20)}
+  label: labels[0],                                   
+  animation: google.maps.Animation.DROP
     });
-
-
-
-
-
-
+            
 var tea_time = new google.maps.Marker({map: map,
   position: new google.maps.LatLng(40.7956353, -77.8586985),
-  icon: { url: "resources/img/tea_time.jpg",
-          scaledSize: new google.maps.Size(20, 20)}
+  label: labels[1]
+  //icon: { url: "resources/img/marker.png",
+  //        scaledSize: new google.maps.Size(20, 20)}
     });
-
 
 var momo = new google.maps.Marker({map: map,
   position: new google.maps.LatLng(40.792864 ,-77.8631108),
-  icon: { url: "resources/img/momo.jpg",
-          scaledSize: new google.maps.Size(21, 21)}
+  label: labels[2]
     });
 
 var tommy = new google.maps.Marker({map: map,
   position: new google.maps.LatLng(40.798304,-77.856158),
-  icon: { url: "resources/img/tommy.png",
-          scaledSize: new google.maps.Size(21, 21)}
+  label: labels[3]
     });
 
 var hungry = new google.maps.Marker({map: map,
   position: new google.maps.LatLng(40.798228,-77.855521),
-  icon: { url: "resources/img/hungry.png",
-          scaledSize: new google.maps.Size(21, 21)}
+  label: labels[4]
     });
 
 

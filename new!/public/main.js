@@ -57,8 +57,8 @@ function img_direct(){
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
       $('#wrapper').dialog({
-          autoOpen: false,
-          title: 'Upload Image!'
+          autoOpen: false
+          // title: 'Share a photo'
       });
       dialogOpen();
 
@@ -185,7 +185,7 @@ function reload(){
 }
 
 function confirmation(){
-  alert("Your message has been sent!");
+  alert("Thank you for contacting us! We will be in touch shortly.");
   location.reload();
 }
 

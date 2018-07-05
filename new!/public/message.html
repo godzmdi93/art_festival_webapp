@@ -23,11 +23,13 @@
    })();
 </script>
 
-  <title>Art Festival</title>
+  <title>Memofest</title>
 
 <body>
-
-
+<div class="row">
+    <p style="margin-top: 20px;"><a href="index.html">Back to the previous page</a></p>
+</div>
+    
 <section class="section-form" id="contactus">
     <div class="row">
       <h2>Story board</h2>
@@ -35,28 +37,34 @@
       <div class="row">
       <form method="post" action="#" class="contact-form" id="storyForm">
         <div class="row">
-          <div class="col span-1-of-3">
-            <label for="tag">Tag</label>
+          <div class="col span-1-of-4">
+            <label for="tag">Story Title</label>
           </div>
-          <div class="col span-2-of-3">
-            <input type="text" name="tag" id="tag" placeholder="Use one word to describe your story" required>
+          <div class="col span-3-of-4">
+            <input type="text" name="tag" id="tag" placeholder="Title" required>
           </div>
         </div>
 
      <div class="row">
-          <div class="col span-1-of-3">
-            <label>Share your story here</label>
+          <div class="col span-1-of-4">
+            <label>Share Your Story</label>
           </div>
-          <div class="col span-2-of-3">
-            <textarea name="story" id="story" placeholder="Share your story at this festival. We will send food and drinks discounts to your registered email right after you click the button 'send'."></textarea>
+          <div class="col span-3-of-4">
+            <textarea name="story" id="story" placeholder="Upload your story here. When you finish, click 'send'. You will receive your discount shortly."></textarea>
           </div>
         </div>
 
       <div class="row">
-        <div align="center">
+          <div class="col span-1-of-4">
+                <label>&nbsp;</label>
+            </div>
+          <div class="col span-3-of-4">
+            <button type="submit" class="btn btn-full btn-js-11">SEND</button>
+          </div>
+        <!-- <div align="center">
           <button type="submit" class="btn btn-full btn-js-11">SEND</button>
           <button type="button" class="btn btn-full btn-js-11" onclick="location.href='index.html'">BACK</button>
-        </div>
+        </div> -->
           </div>
     </form>
 </section>
