@@ -263,34 +263,78 @@
         }
       };
 
-var labels = ['Waker Chicken', 'Tea-Time', 'Momotaro', 'Xi\'an', 'U'];
+var labelwaker = 'Waker Chichen';
+var labeltea = 'Tea-Time';
+var labelmomo = 'Momotaro';
+var labelxi = 'Xi\'an Grill';
+var labelu = 'Are U Hungry';
+            
+var markerIcon = {
+  url: 'http://image.flaticon.com/icons/svg/252/252025.svg',
+  scaledSize: new google.maps.Size(50, 50),
+  origin: new google.maps.Point(0, 0),
+  anchor: new google.maps.Point(32,65),
+  labelOrigin: new google.maps.Point(40,33)
+};
 
 var walker = new google.maps.Marker({map: map,
-  position: new google.maps.LatLng(40.796088, -77.8577317),
-  label: labels[0],                                   
-  animation: google.maps.Animation.DROP
+  position: new google.maps.LatLng(40.796188, -77.8577317),
+  icon: markerIcon,                                 
+  animation: google.maps.Animation.DROP,
+  label: {
+    text: labelwaker,
+    color: "#282C43",
+    fontSize: "14px",
+    fontWeight: "bold",
+  }
     });
             
 var tea_time = new google.maps.Marker({map: map,
   position: new google.maps.LatLng(40.7956353, -77.8586985),
-  label: labels[1]
-  //icon: { url: "resources/img/marker.png",
-  //        scaledSize: new google.maps.Size(20, 20)}
+  // icon: markerIcon,
+  animation: google.maps.Animation.DROP,
+  label: {
+    text: labeltea,
+    color: "#282C43",
+    fontSize: "14px",
+    fontWeight: "bold"
+  }
     });
 
 var momo = new google.maps.Marker({map: map,
   position: new google.maps.LatLng(40.792864 ,-77.8631108),
-  label: labels[2]
+  icon: markerIcon,
+  animation: google.maps.Animation.DROP,
+  label: {
+    text: labelmomo,
+    color: "#282C43",
+    fontSize: "14px",
+    fontWeight: "bold"
+  }
     });
 
 var tommy = new google.maps.Marker({map: map,
   position: new google.maps.LatLng(40.798304,-77.856158),
-  label: labels[3]
+  icon: markerIcon,
+  animation: google.maps.Animation.DROP,
+  label: {
+    text: labelxi,
+    color: "#282C43",
+    fontSize: "14px",
+    fontWeight: "bold"
+  }
     });
 
 var hungry = new google.maps.Marker({map: map,
-  position: new google.maps.LatLng(40.798228,-77.855521),
-  label: labels[4]
+  position: new google.maps.LatLng(40.797928,-77.855521),
+  // icon: markerIcon,
+  animation: google.maps.Animation.DROP,
+  label: {
+    text: labelu,
+    color: "#282C43",
+    fontSize: "14px",
+    fontWeight: "bold"
+  }
     });
 
 
