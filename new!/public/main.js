@@ -349,7 +349,7 @@ function handleFileSelect(event) {
 
 function confirmUpload() {
 
-    location.reload();
+//    location.reload();
     var user = firebase.auth().currentUser.email;
     var metadata = {
         contentType: 'image',
@@ -362,22 +362,6 @@ function confirmUpload() {
       var uploadTask = firebase.storage().ref().child('images/' + selectedFile.name).put(selectedFile, metadata);
 
 
-      send_email_email();
-
-      // image download
-      var downloadTask = firebase.storage().ref().child('images/' + selectedFile.name);
-
-      downloadTask.getDownloadURL().then(function(url) {
-
-        var urlRef = firebase.database().ref('img_url').push();
-        urlRef.set({
-          urls : url,
-          name : selectedFile.name
-        });
-      })
-
-      // end of download
-
 	uploadTask.on('state_changed', function(snapshot){
   		// Observe state change events such as progress, pause, and resume
   		// See below for more detail
@@ -386,10 +370,21 @@ function confirmUpload() {
 	}, function() {
   		// Handle successful uploads on complete
   		// For instance, get the download URL: https://firebasestorage.googleapis.com/...
-  		$(".upload-group")[0].before("Success!");
-  		$(".upload-group").hide();
+                uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+                  console.log('File available at', downloadURL);
+                  let urlRef = firebase.database().ref('img_url').push();
+                  urlRef.set({
+                    urls : downloadURL,
+                    name : selectedFile.name
+                  });
                   location.reload();
+                });
+  		$(".upload-group")[0].before("Success!");
+  		$(".upload-group").hide();                 
 	});
+
+
+      send_email_email();
 }
 
 
