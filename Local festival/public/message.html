@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel ="stylesheet" type="text/css" href="vendors/css/normalize.css">
+  <link rel ="stylesheet" type="text/css" href="vendors/css/grid.css">
+  <link rel ="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+  <link rel ="stylesheet" type="text/css" href="vendors/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="all" />
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="/require.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_GK9h5OLOMBs5sELCd4iZc");
+   })();
+</script>
+
+  <title>Memofest</title>
+
+<body>
+<div class="row">
+    <p style="margin-top: 20px;"><a href="index.html">Back to the previous page</a></p>
+</div>
+    
+<section class="section-form" id="contactus">
+    <div class="row">
+      <h2>Story board</h2>
+    </div>
+      <div class="row">
+      <form method="post" action="#" class="contact-form" id="storyForm">
+        <div class="row">
+          <div class="col span-1-of-4">
+            <label for="tag">Story Title</label>
+          </div>
+          <div class="col span-3-of-4">
+            <input type="text" name="tag" id="tag" placeholder="Title" required>
+          </div>
+        </div>
+
+     <div class="row">
+          <div class="col span-1-of-4">
+            <label>Share Your Story</label>
+          </div>
+          <div class="col span-3-of-4">
+            <textarea name="story" id="story" placeholder="Upload your story here. When you finish, click 'send'. You will receive your discount shortly."></textarea>
+          </div>
+        </div>
+
+      <div class="row">
+          <div class="col span-1-of-4">
+                <label>&nbsp;</label>
+            </div>
+          <div class="col span-3-of-4">
+            <button type="submit" class="btn btn-full btn-js-11">SEND</button>
+          </div>
+        <!-- <div align="center">
+          <button type="submit" class="btn btn-full btn-js-11">SEND</button>
+          <button type="button" class="btn btn-full btn-js-11" onclick="location.href='index.html'">BACK</button>
+        </div> -->
+          </div>
+    </form>
+</section>
+
+<section class ="section-artistintro js--wp-3" id="artists">
+  <div class="row">
+    <h2>Stories from Memofest Community</h2>
+  </div>
+  <div class="row" id="test2">
+  </div>
+</section>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<!-- Add additional services you want to use -->
+<script src="message.js"></script>
+
+<script src ="http://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+<!-- <script src ="http://cdn.jsedlivr.net/html5shiv/3.7.2/html5shiv.min.js"></script> -->
+<script src ="http://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+<script src ="vendors/js/jquery.waypoints.min.js"></script>
+<script src="resources/js/script.js"></script>
+</body>
+</html>

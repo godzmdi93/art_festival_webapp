@@ -1,0 +1,21 @@
+[debug] [2018-07-03T17:05:47.011Z] ----------------------------------------------------------------------
+[debug] [2018-07-03T17:05:47.014Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-07-03T17:05:47.014Z] CLI Version:   3.19.0
+[debug] [2018-07-03T17:05:47.014Z] Platform:      darwin
+[debug] [2018-07-03T17:05:47.014Z] Node Version:  v8.11.2
+[debug] [2018-07-03T17:05:47.014Z] Time:          Tue Jul 03 2018 13:05:47 GMT-0400 (EDT)
+[debug] [2018-07-03T17:05:47.014Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-03T17:05:47.025Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-03T17:05:47.025Z] > authorizing via signed-in user
+[debug] [2018-07-03T17:05:47.027Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/contactform-1be84  
+  
+ Tue Jul 03 2018 13:05:47 GMT-0400 (EDT)
+[debug] [2018-07-03T17:05:47.086Z] Error: unable to verify the first certificate
+    at TLSSocket.<anonymous> (_tls_wrap.js:1105:38)
+    at emitNone (events.js:106:13)
+    at TLSSocket.emit (events.js:208:7)
+    at TLSSocket._finishInit (_tls_wrap.js:639:8)
+    at TLSWrap.ssl.onhandshakedone (_tls_wrap.js:469:38)
+[error] 
+[error] Error: Server Error. unable to verify the first certificate

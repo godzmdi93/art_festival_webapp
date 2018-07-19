@@ -50,54 +50,53 @@
         <img src="resources/img/logo25.png" alt ="Art Festival logo" class="logo">
         <img src="resources/img/logo25.png" alt ="Art Festival logo" class="logo-1">
         <ul class="main-nav js--main-nav">
-          <li><a href="#features">Deals</a></li>
-          <li><a href="#looks">Photos</a></li>
-          <li><a href="#artists">Stories</a></li>
-          <li><a href="#contactus">Contact</a></li>
-          <li><a href="#map">Discount Map</a></li>
+          <li><a href="#steps">Why Memofest</a></li>
+          <li><a href="#story">Share your story</a></li>
+          <li><a href="#community">Featured Stories</a></li>
+          <!-- <li><a href="#contactus">Contact</a></li>
+          <li><a href="#map">Discount Map</a></li> -->
         </ul>
         <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
       </div>
     </nav>
     <div class="hero-text-box">
-      <h1>SHARE YOUR STORIES, GET DISCOUNTS</h1>
-      
-      <p style="color: white; margin-bottom: 40px;">Share Memofest on social media with your friends and family using our official hashtag #memofest</p>
+      <h1>Co-create a festival storybook<br>enrich your local culture</h1>
+        <p style="color: white; margin-bottom: 40px;"><br>Share your story of a local festival and construct a storybook with the community</p>
 
       <!-- created login and signout button  Junwoo Seo -->
-      <a class="btn btn-full btn-js-11" onclick=href="login.html" id= "login_button">Log In</a>
-      <a class="btn btn-full btn-js-11" onclick="signout()" id= "signout_button">Sign out</a>
+      <!-- <a class="btn btn-full btn-js-11" onclick=href="login.html" id= "login_button">Log In</a>
+      <a class="btn btn-full btn-js-11" onclick="signout()" id= "signout_button">Sign out</a> -->
 
     </div>
   </header>
-  <section class="section-steps">
+    
+    <section class="section-steps js--section-steps" id="steps">
     <div class="row">
-      <h2>How it works</h2>
+      <h2>In Momefest, you are</h2>
     </div>
     <div class="row">
       <div class="col span-1-of-2">
-        <img src= "resources/img/phone.png" alt="Memofest" class="app-screen js--wp-2">
+        <img src= "resources/img/phone.png" alt="Type your story" class="app-screen js--wp-2">
       </div>
       <div class="col span-1-of-2" steps-box>
         <div class="works-step">
           <div>1</div>
-          <p><a href="login.html" style="color: #e67e22; text-decoration: none;">Signup or login</a> to Memofest using your email</p>
+            <p>NOT only a local resident, but who makes a better community</p>
         </div>
         <div class="works-step">
           <div>2</div>
-          <p>Share festival photos, stories, and memories</p>
+          <p>a storyteller, who enriches the local heritage by telling festival stories</p>
         </div>
         <div class="works-step">
           <div>3</div>
-          <p>Your will receive the discount via email! Please note that we might also contact you for an optional follow-up to learn more about your festival experience</p>
+          <p>a community builder, who contructs the culture of your community</p>
           <!-- <p>Share Memofest on social media with your friends and family using our official hashtag #memofest</p> -->
-        </div>
-      </div>
+          </div>
     </div>
   </section>
-  
-  
-  <section class="section-features js--section-features" id="features">
+    
+    
+  <!-- <section class="section-features js--section-features" id="features">
     <div class="row">
       <h2>WAYS TO GET DEALS ON FOOD AND DRINKS!</h2>
       <p class="long-copy">
@@ -105,24 +104,26 @@
         <center>Are U Hungry, Tommy's Asian (Xi'an) Grill, Waker Chicken, Momo Taro, Tea Time</center></br>
       </p>
     </div>
-    <div class ="row js--wp-1">
+    <div class ="row js--wp-1"> -->
 
       <!-- if user is not logged in, cant view upload img page -->
-      <div class="col span-1-of-4 box" onclick="img_direct()" style="cursor: pointer;">
+      <!-- <div class="col span-1-of-4 box" onclick="img_direct()" style="cursor: pointer;">
         <div id="wrapper" style="display:none;">
           <div id="upload_everything">
                 <div class="btn btn-success file-input-wrapper">
                   <i class="glyphicon glyphicon-plus"></i>
-                  <span>Add</span>
+                  <p>Choose a photo</p>
                   <button class="btn-file-input" hidden></button>
                   <input type="file" name="image" id="upload" value="" />
                 </div>
-                <span id="img_text" style="float: right; margin-top: -14px;"></span>
+                <span id="img_text" style="float: right;
+                margin-right: -80px;
+                margin-top: -14px;"></span>
             <div class="input-group upload-group">
               <input type="text" placeholder="Describe your photo" id="imgTitle" input-xs/>
             </div>
             <div class="input-group upload-group">
-              <input type="text" placeholder="Tag the photo" id="imgDesc" input-xs/>
+              <input type="text" placeholder="Tag" id="imgDesc" input-xs/>
             </div>
             <div style="text-align:center">
             <button type="button" align="center" class="btn btn-full btn-js-11" onclick="confirmUpload()">UPLOAD</button>
@@ -136,11 +137,11 @@
         </p>
       </div>
 
-      <div class="col span-1-of-4 box" onclick="story_direct()" style="cursor:pointer;">
+      <div class="col span-1-of-4 box" onclick="story_direct()" style="cursor:pointer;" >
         <i class="ion-laptop icon-big"></i>
         <h3>Upload your story</h3>
         <p>
-          Tell us a story about your experience at this festival or share a memory of a past local festival and get 10% discount at Momotaro and 10% discount at Teatime!
+          Tell us a story about your experience at this festival or share a memory of a past local festival and get 10% discount at Momotaro and 5% discount at Teatime!
         </p>
       </div>
       <div class="col span-1-of-4 box" onclick="story_direct()" style="cursor:pointer;">
@@ -166,53 +167,41 @@
 
 
     </ul>
-  </section>
+  </section> -->
 
-  <section class ="section-artistintro js--wp-3" id="artists">
+
+  <section class="section-form js--section-story" id="story">
     <div class="row">
-      <h2>Stories from the Memofest Community</h2>
-    </div>
-    <div class="row"id="test3">
-    </div>
-  </section>
-
-
-
-  <section class="section-form" id="contactus">
-    <div class="row">
-      <h2>Contact us</h2>
+      <h2>Share your festival stories and memories</h2>
     </div>
       <div class="row">
       <form method="post" action="#" class="contact-form" id="contactForm">
         <div class="row">
           <div class="col span-1-of-3">
-            <label for="name">Name</label>
+            <label for="name">Story Title</label>
           </div>
           <div class="col span-2-of-3">
-            <input type="text" name="name" id="name" placeholder="Your name" required>
+            <input type="text" name="name" id="name" placeholder="Title" required>
           </div>
         </div>
 
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label>Your Story</label>
+          </div>
+          <div class="col span-2-of-3">
+            <textarea name="message" id="message" placeholder="Tell your festival story"></textarea>
+          </div>
+        </div>
 
         <div class="row">
           <div class="col span-1-of-3">
-            <label for="email">Email</label>
+            <label for="email">Your Email</label>
           </div>
           <div class="col span-2-of-3">
             <input type="email" name="email" id="email" placeholder="Your email" required>
           </div>
         </div>
-
-
-        <div class="row">
-          <div class="col span-1-of-3">
-            <label>Ask your question here</label>
-          </div>
-          <div class="col span-2-of-3">
-            <textarea name="message" id="message" placeholder="Your message"></textarea>
-          </div>
-        </div>
-
 
         <div class="row">
             <div class="col span-1-of-3">
@@ -226,15 +215,23 @@
     </div>
   </section>
 
+        
+  <section class ="section-artistintro js--wp-3" id="community">
+    <div class="row">
+      <h2>Featured Festival Stories</h2>
+    </div>
+    <div class="row"id="test3">
+    </div>
+  </section>
 
   <!-- Map function -->
   <!-- Ask Junwoo Seo -->
     <!-- Map function -->
   <!-- Ask Junwoo Seo -->
-    <div>
+  <!--  <div>
       <h2><a href="https://arts-festival.com/">Arts Festival</a> (July 12-15, 2018)</h2>
-      <div class="row">
-            <center><p style="margin-bottom: 20px;">Blue line: Arts Festival location; Red dots: discounted food and drinks</p></center>
+        <div class="row">
+            <center><p style="margin-bottom: 20px;"> Blue line: Arts Festival location; Red dots: discounted food and drinks</p></center>
         </div>
     <section id="map" class = "street">
     </section>
@@ -356,6 +353,7 @@ dirService.route(request, function(result, status) {
     }
     </script>
   </div>
+-->
 
   <!-- Add additional services you want to use -->
   <script src="main.js"></script>
